@@ -186,6 +186,34 @@ _redact_subs = [
     (re.compile(r"You're certified-ready"), "The whole bootcamp"),
 ]
 
+# --------------------------------------------------------------------------- #
+# Presenter → reader normalization.
+# The slides are written for a live, time-boxed workshop ("Live demo",
+# "Your turn", "(5 min)"). The book is read solo, so reframe that classroom
+# framing into self-contained prose — without editing the slide/exercise
+# sources (Constitution Principle III).
+# --------------------------------------------------------------------------- #
+
+# Trailing pacing budget on a heading, e.g. "… (5 min)" / "… (~30 min)".
+_presenter_heading_time_re = re.compile(r"\s*\((?:~\s*)?\d+\s*min(?:ute)?s?\)\s*$")
+
+_presenter_subs = [
+    # Section labels that assume a presenter the reader can watch.
+    (re.compile(r"^(#{1,6}\s+)Live demo\s*·\s*"), r"\1Worked example · "),
+    (re.compile(r"^(#{1,6}\s+)Your turn\s*·\s*"), r"\1Try it yourself · "),
+    # The classroom "format" line and the timed-workshop scenario intro.
+    (re.compile(r"short theory → live demo → you build it → quick review"),
+     "short theory → a worked example → you build it → quick review"),
+    (re.compile(r"You're starting a 4-hour workshop\.\s*"), ""),
+    # Stage directions that only make sense in front of a live audience.
+    (re.compile(r"^\s*Watch\.\s*Don't type yet\.\s*$"),
+     "Read through this worked example before trying it yourself."),
+    (re.compile(r"narrate the \*\*5-step loop\*\* out loud"),
+     "trace the **5-step loop** for yourself"),
+    (re.compile(r"^(\s*\d+\.\s+)Narrate:\s*"), r"\1Note "),
+    (re.compile(r"\s+out loud\b"), ""),
+]
+
 
 def strip_frontmatter(text: str) -> tuple[str, str | None]:
     """Remove leading YAML frontmatter; return (body, title-if-found)."""
@@ -350,6 +378,10 @@ def transform(text: str, source_rel: str, link_map: dict[str, str],
             continue
         for _pat, _repl in _redact_subs:
             line = _pat.sub(_repl, line)
+        for _pat, _repl in _presenter_subs:
+            line = _pat.sub(_repl, line)
+        if _heading_re.match(line):
+            line = _presenter_heading_time_re.sub("", line)
         line = line.rstrip()
 
         # Demote headings beneath the chapter heading.

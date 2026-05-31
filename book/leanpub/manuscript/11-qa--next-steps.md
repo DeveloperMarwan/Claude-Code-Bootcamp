@@ -6,7 +6,7 @@ Part 11 · 30 min · Closing
 
 **Ten projects done. Now: the three frameworks you keep and Monday.**
 
-### Theory · Three frameworks you keep (4 min)
+### Theory · Three frameworks you keep
 
 Forget the syntax; keep these three:
 
@@ -34,7 +34,7 @@ Every one is a habit, not a knowledge gap. Fix the habit.
 | **Over-eager agent** | Long run → wrong abstraction → 600-line diff | Stop at the plan, review, *then* implement |
 | **Merge-without-review** | Claude commits + pushes in one shot | Review-before-commit, even when "obviously fine" |
 
-### Live demo · "Fix it" loop vs. precise prompt (4 min)
+### Worked example · "Fix it" loop vs. precise prompt
 
 1. Reproduce the **"fix it" loop** — vague prompt → unfocused diff → drift:
 
@@ -49,7 +49,7 @@ GET /notes/999 returns 500, expected 404. KeyError 'note' in get_note() line 42.
 Fix only this; keep all other behavior. Show the diff.
 ```
 
-3. Narrate: the difference between coaching and guessing.
+3. Note the difference between coaching and guessing.
 
 **Success signal**: the precise prompt fixes it in one pass; the vague loop doesn't.
 
@@ -67,7 +67,7 @@ The tools change monthly; the **habits** don't. What to watch — and the trick 
 
 > The rule that survives every release: **Plan → Implement → Test → Review → Commit.**
 
-### Your turn · The Monday sentence (3 min)
+### Try it yourself · The Monday sentence
 
 No code this time — one sentence. Complete it and write it where you'll see it:
 
@@ -77,9 +77,9 @@ Then:
 
 - ⭐ Star the repo so you can find the skills on Monday.
 
-**Success signal**: you can say your Monday sentence out loud without hesitating.
+**Success signal**: you can say your Monday sentence without hesitating.
 
-### Done · The whole bootcamp (1 min)
+### Done · The whole bootcamp
 
 **Definition of done — the whole bootcamp**
 

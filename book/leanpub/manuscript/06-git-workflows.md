@@ -6,7 +6,7 @@ Module 06 · 22 min
 
 **Never let Claude push to main. Branch, commit atomically, PR — you stay the gate.**
 
-### Theory · Safe git for AI code (4 min)
+### Theory · Safe git for AI code
 
 - **Branch first**, always: `<type>/<scope>-<summary>` → `feat/notes-api-search`.
 - **Atomic commits** — one logical change each. Claude can split a dirty tree if you ask.
@@ -47,7 +47,7 @@ Stretch goal in the exercise — wire it on a throwaway repo.
 - Writing the PR from the prompt instead of the diff.
 - Pushing to main (always branch first).
 
-### Live demo · Split commits, write the PR (5 min)
+### Worked example · Split commits, write the PR
 
 1. On the Module 5 tree (dirty): `git switch -c feat/notes-api-tests-and-fixes`. Then paste:
 
@@ -66,7 +66,7 @@ Write a PR description from the branch diff: What, Why, How to test, Risk, Rollb
 
 **Success signal**: ≥ 3 atomic commits with Conventional subjects; PR explains *why*, not just *what*.
 
-### Your turn · Branch → commits → PR (10 min)
+### Try it yourself · Branch → commits → PR
 
 **Exercise**: [`exercises/part-06/README.md`](#hands-on-exercise--module-06)
 
@@ -79,7 +79,7 @@ Take your Module 5 work onto a feature branch and ship a clean history:
 
 **Success signal**: a mergeable PR with sensible Conventional-Commit messages.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 

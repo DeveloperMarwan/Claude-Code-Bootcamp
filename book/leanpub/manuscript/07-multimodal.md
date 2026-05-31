@@ -6,7 +6,7 @@ Module 07 · 30 min
 
 **Claude can read a picture. Hand it a wireframe; get a working UI back.**
 
-### Theory · Layout-first prompting (4 min)
+### Theory · Layout-first prompting
 
 > Let Claude **read the layout** from the image; you describe what it **can't** see.
 
@@ -41,7 +41,7 @@ Then drop into the prompt: *"Attached is the converted Markdown of `report.pdf`.
 - Forgetting to attach the image.
 - Iterating five rounds (cap at three).
 
-### Live demo · Wireframe → running UI (6 min)
+### Worked example · Wireframe → running UI
 
 1. Open `exercises/part-07/wireframe-sketch.png` in Claude Code.
 2. Paste the prompt **with the framework constraint**:
@@ -56,7 +56,7 @@ template. Match the layout — header, sidebar, main, footer. Run on localhost:5
 
 **Success signal**: the app runs with one command and the layout clearly matches the wireframe.
 
-### Your turn · Dashboard from wireframe (13 min)
+### Try it yourself · Dashboard from wireframe
 
 **Exercise**: [`exercises/part-07/README.md`](#hands-on-exercise--module-07)
 
@@ -73,7 +73,7 @@ Run the **visual-diff loop** at least once; record patches in `diff-notes.md`.
 
 **Success signal**: render at 1280×720 unmistakably matches the wireframe.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 

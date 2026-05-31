@@ -6,7 +6,7 @@ Module 05 · 28 min
 
 **Untested AI code is a guess. Make Claude review its own work as a stranger's PR.**
 
-### Theory · Test, then self-review (4 min)
+### Theory · Test, then self-review
 
 **Test pyramid for AI code**: many cheap unit tests · a few integration tests on the happy path · always cover **error paths**.
 
@@ -39,7 +39,7 @@ Test in-process with a temp SQLite DB per test — **no network, no HTTP mocks, 
 - Copying the skill rubric verbatim — your rubric must reflect *your* blind spots.
 - Confusing the student rubric with the instructor grading rubric (different files).
 
-### Live demo · Plant a bug, catch it (6 min)
+### Worked example · Plant a bug, catch it
 
 1. Open the Module 4 winner; ask for a test suite (pytest + httpx, or vitest + fetch). Run → green.
 2. Plant one off-by-one bug live (e.g. a pagination boundary).
@@ -54,7 +54,7 @@ List concrete bugs with file, line, and a minimal fix. Don't say "looks good".
 
 **Success signal**: the self-review names the bug's file, line, and fix — not "looks good".
 
-### Your turn · Suite + 2 bugs + your rubric (11 min)
+### Try it yourself · Suite + 2 bugs + your rubric
 
 **Exercise**: [`exercises/part-05/README.md`](#hands-on-exercise--module-05)
 
@@ -66,7 +66,7 @@ List concrete bugs with file, line, and a minimal fix. Don't say "looks good".
 
 **Success signal**: tests pass on fixed code; rubric has ≥ 1 check not in `skills/code-review/SKILL.md`.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 

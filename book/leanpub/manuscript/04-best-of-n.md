@@ -6,7 +6,7 @@ Module 04 · 30 min
 
 **The first answer is rarely the best. Generate three; score; ship the winner.**
 
-### Theory · Best-of-N (4 min)
+### Theory · Best-of-N
 
 > **Generate N independent candidates → score on a rubric → pick the winner.** N = 3 is the sweet spot.
 
@@ -40,7 +40,7 @@ Record a one-paragraph justification per candidate in `scoring.md`. **Never dele
 - Skipping the rubric → picking by vibe → no lift.
 - Choosing the "elegant" one that fails the test plan (correctness is the gate).
 
-### Live demo · Three candidates, one winner (6 min)
+### Worked example · Three candidates, one winner
 
 **The reusable prompt — paste it verbatim for A, B, and C:**
 
@@ -57,7 +57,7 @@ EXAMPLES: POST /notes {"text":"hi"} -> 201 + id;
 
 > Variance must come from the model, **not** the prompt. Never say "now do it differently."
 
-### Your turn · Notes API, Best-of-3 (13 min)
+### Try it yourself · Notes API, Best-of-3
 
 **Exercise**: [`exercises/part-04/README.md`](#hands-on-exercise--module-04)
 
@@ -74,7 +74,7 @@ Track A: Python (FastAPI + Pydantic v2). Track B: Node (Hono + Zod + better-sqli
 
 **Success signal**: all five endpoints respond with correct status codes via curl.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 

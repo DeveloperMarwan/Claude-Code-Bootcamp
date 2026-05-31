@@ -6,7 +6,7 @@ Module 03 · 22 min
 
 **Stop re-explaining your stack. Write it once; Claude reads it every prompt.**
 
-### Theory · CLAUDE.md is a behavior file (4 min)
+### Theory · CLAUDE.md is a behavior file
 
 `CLAUDE.md` lives at the repo root. Claude reads it **automatically on every prompt**.
 
@@ -89,7 +89,7 @@ Every line changes Claude's output. Still under 80 lines.
 - 200 lines of bloat instead of a lean 80.
 - Skipping **Do-not** — and not committing the file (if it's not in git, it isn't real).
 
-### Live demo · Before vs. after CLAUDE.md (5 min)
+### Worked example · Before vs. after CLAUDE.md
 
 **The prompt — run it twice, unchanged (before, then after):**
 
@@ -104,7 +104,7 @@ to a file. Match the project's existing conventions.
 
 **Success signal**: with `CLAUDE.md` present, Claude matches your naming/layout without being told.
 
-### Your turn · Author your CLAUDE.md (10 min)
+### Try it yourself · Author your CLAUDE.md
 
 **Exercise**: [`exercises/part-03/README.md`](#hands-on-exercise--module-03)
 
@@ -117,7 +117,7 @@ Write a `CLAUDE.md` for your Module 2 repo (or a personal repo):
 
 **Success signal**: on the next prompt, Claude obeys one convention you wrote — capture a proof screenshot.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 

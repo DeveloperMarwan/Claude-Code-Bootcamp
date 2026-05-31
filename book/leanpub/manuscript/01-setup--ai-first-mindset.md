@@ -12,7 +12,7 @@ Instructor: **Luca Berton**
 
 **10 small, real projects in 4 hours** — one per module, all with Claude Code.
 
-- **Format**: short theory → live demo → you build it → quick review. Every module.
+- **Format**: short theory → a worked example → you build it → quick review. Every module.
 - **Proof of work**: each module drops a `module-NN/` folder into your final submission zip.
 - **The through-line**: one repeatable loop you take back to your day job on Monday.
 
@@ -39,7 +39,7 @@ You direct. Claude implements. You review and merge. **You are always the engine
 
 **Rule of thumb**: start on **Sonnet**. Escalate to **Opus** when stuck on design. Drop to **Haiku** for bulk/trivial work. Switch live with `/model`.
 
-### Theory · The AI coding loop (3 min)
+### Theory · The AI coding loop
 
 **You stay the engineer of record. Claude proposes; you decide.**
 
@@ -97,9 +97,9 @@ Forgot one? `/help` is one keystroke away.
 - Treating Review as optional.
 - Using PowerShell on Windows — move to WSL2 (see `student-guide.md`).
 
-### Live demo · "Read this repo" (5 min)
+### Worked example · "Read this repo"
 
-Watch. Don't type yet.
+Read through this worked example before trying it yourself.
 
 1. Open this repo in your IDE; run `git status` (clean) + `python3 --version` / `node --version` (green).
 2. Paste the prompt verbatim:
@@ -109,11 +109,11 @@ List the top-level files and tell me what kind of repository this is.
 ```
 
 3. Claude reads the tree → narrates "workshop repo: slides + exercises + skills".
-4. While it responds, narrate the **5-step loop** out loud.
+4. While it responds, trace the **5-step loop** for yourself.
 
 **Success signal**: Claude names `slides/`, `exercises/`, and `skills/` without you opening them.
 
-### Your turn · Verify + name the loop (8 min)
+### Try it yourself · Verify + name the loop
 
 **Exercise**: [`exercises/part-01/README.md`](#hands-on-exercise--module-01)
 
@@ -134,7 +134,7 @@ End with one sentence on why skipping Review is the most common failure mode.
 
 **Success signal**: `module-01/` contains both files; the notes name all 5 steps in order.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 
@@ -157,7 +157,7 @@ Verify your environment and articulate the AI coding loop in your own words.
 
 ### Scenario
 
-You're starting a 4-hour workshop. Before the first prompt, prove your toolchain works and write down — in your own words — how you'll use Claude Code today.
+Before the first prompt, prove your toolchain works and write down — in your own words — how you'll use Claude Code today.
 
 ### Starter instructions
 

@@ -6,7 +6,7 @@ Module 09 · 22 min
 
 **Stop re-typing workflows. Package them. This is agentic engineering.**
 
-### Theory · Four pillars of agentic engineering (4 min)
+### Theory · Four pillars of agentic engineering
 
 1. **Skills** — packaged workflows at `skills/<name>/SKILL.md`, invoked with `/<name>`. Your carry-out from today.
 2. **Hooks** — shell commands that fire before/after Claude actions (format, lint, deny dangerous commands).
@@ -45,7 +45,7 @@ Module 09 · 22 min
 - Skipping the **Worked example** (reviewers can't tell if it works).
 - Fanning out 4 agents on a 10-minute task.
 
-### Live demo · Author a Skill in 4 minutes (5 min)
+### Worked example · Author a Skill in 4 minutes
 
 1. Open `skills/code-review/SKILL.md`; read its H2 headers aloud.
 2. Paste the drafting prompt:
@@ -60,7 +60,7 @@ code-review/SKILL.md. Purpose: score 3 diffs on Correctness, Simplicity, Fit.
 
 **Success signal**: the new skill runs and its output matches its own spec — no extra prompting.
 
-### Live demo · Connect GitHub over MCP (4 min)
+### Worked example · Connect GitHub over MCP
 
 **"Connect, don't paste."** Let Claude read GitHub directly instead of copying issue text into chat.
 
@@ -80,7 +80,7 @@ Show me all open PRs assigned to me, then summarize what PR #456 changes.
 
 **Success signal**: real PR data Claude could only get by reading the connector — zero copy-paste.
 
-### Your turn · Author a reusable Skill (10 min)
+### Try it yourself · Author a reusable Skill
 
 **Exercise**: [`exercises/part-09/README.md`](#hands-on-exercise--module-09)
 
@@ -95,7 +95,7 @@ Write one **project-agnostic** skill for a workflow you'll repeat (e.g. `commit-
 
 **Success signal**: one real invocation whose output matches the skill's **Outputs** section.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 

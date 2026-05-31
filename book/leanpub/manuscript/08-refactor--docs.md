@@ -6,7 +6,7 @@ Module 08 · 24 min
 
 **Refactor under written constraints. Document from the diff — never from the prompt.**
 
-### Theory · Constrained refactor + two-pass docs (4 min)
+### Theory · Constrained refactor + two-pass docs
 
 > **Tell Claude what may NOT change**: public API, file count, runtime behavior.
 
@@ -49,7 +49,7 @@ Module 08 · 24 min
 - Vetoing every unrequested change (some are fine — read the diff).
 - 200-line `ARCHITECTURE.md` (trim aggressively).
 
-### Live demo · Bad vs. constrained refactor (5 min)
+### Worked example · Bad vs. constrained refactor
 
 1. Open `exercises/part-08/before/` (messy). Show the **unconstrained** refactor → bloated diff.
 2. Reset. Paste the **constrained** prompt:
@@ -64,7 +64,7 @@ public signatures, file count, or behavior. Tests must stay green. Show the diff
 
 **Success signal**: the constrained diff respects every line of `constraints.md` and tests stay green.
 
-### Your turn · Refactor + handoff docs (12 min)
+### Try it yourself · Refactor + handoff docs
 
 **Exercise**: [`exercises/part-08/README.md`](#hands-on-exercise--module-08)
 
@@ -75,7 +75,7 @@ public signatures, file count, or behavior. Tests must stay green. Show the diff
 
 **Success signal**: tests green · diff respects every constraint · both docs within length limits.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 

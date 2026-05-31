@@ -6,7 +6,7 @@ Module 02 · 24 min
 
 **A great prompt is a spec. Write it the way a Tech Lead writes a ticket.**
 
-### Theory · The GCOE prompt (4 min)
+### Theory · The GCOE prompt
 
 A production prompt has **four parts — skip one and quality drops**:
 
@@ -51,7 +51,7 @@ Keep it tight. Every line removes one wrong guess Claude could make.
 - Allowing unintended third-party deps (the constraint exists for a reason).
 - Skipping examples and exit codes — production CLIs are graded on exit codes, not stdout.
 
-### Live demo · Vague vs. GCOE (5 min)
+### Worked example · Vague vs. GCOE
 
 **Step 1 — paste the vague prompt:**
 
@@ -72,7 +72,7 @@ EXAMPLES: `task add "Buy milk"` -> prints id, exit 0;
 
 **Success signal**: the GCOE version runs all four commands with correct exit codes; the vague one doesn't.
 
-### Your turn · CLI Task Manager (12 min)
+### Try it yourself · CLI Task Manager
 
 **Exercise**: [`exercises/part-02/README.md`](#hands-on-exercise--module-02)
 
@@ -91,7 +91,7 @@ task delete <id>
 
 **Success signal**: all four commands run end-to-end; exit codes are `0` / `1` / `2`.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 

@@ -6,7 +6,7 @@ Module 10 · 18 min
 
 **"It runs on my laptop" is not "ready to ship." Make the call across five axes.**
 
-### Theory · Five axes + a verdict (4 min)
+### Theory · Five axes + a verdict
 
 Score every shipping candidate on five axes that **always** matter:
 
@@ -41,7 +41,7 @@ arXiv **2605.18583**: agents routinely take **out-of-scope** actions on benign t
 - 4-page reports — one page or it doesn't get read.
 - Skipping the verdict entirely.
 
-### Live demo · Score the Notes API (4 min)
+### Worked example · Score the Notes API
 
 1. Pick the Module 4 Notes API.
 2. Paste the assessment prompt:
@@ -56,7 +56,7 @@ Deployment, Runbooks, Rollback. Status per axis + biggest risk + a go/no-go verd
 
 **Success signal**: an honest verdict with one concrete Monday-morning action.
 
-### Your turn · Production Readiness Report (8 min)
+### Try it yourself · Production Readiness Report
 
 **Exercise**: [`exercises/part-10/README.md`](#hands-on-exercise--module-10)
 
@@ -70,7 +70,7 @@ Pick **one** project from today (likely Module 4) and assess it:
 
 **Success signal**: all five axes covered + an honest verdict + one concrete next step.
 
-### Done & next (1 min)
+### Done & next
 
 **Definition of done**
 
