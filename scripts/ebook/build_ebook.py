@@ -55,6 +55,7 @@ def validate_sources(manifest: dict) -> None:
     check(manifest.get("front_matter", {}).get("source"))
     for chapter in manifest.get("chapters", []):
         check(chapter.get("slide"))
+        check(chapter.get("supplement"))
         check(chapter.get("exercise"))
         check(chapter.get("solution"))
         for fig in chapter.get("code_figures", []) or []:
@@ -524,6 +525,13 @@ def build_chapter(chapter: dict, include_solutions: bool,
     body = transform(read(chapter["slide"]), chapter["slide"], link_map)
     parts.append(body)
     parts.append("")
+
+    # Book-only supplement (e.g. material with no slide because it is reading,
+    # not presenting). Rendered at the same heading depth as the slide body.
+    if chapter.get("supplement"):
+        parts.append(transform(read(chapter["supplement"]), chapter["supplement"],
+                               link_map))
+        parts.append("")
 
     # US2: embedded exercise.
     if chapter.get("exercise"):

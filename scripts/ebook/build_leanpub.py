@@ -206,6 +206,12 @@ def chapter_md(chapter: dict, include_solutions: bool, link_map: dict,
     p.append(body)
     p.append("")
 
+    # Book-only supplement (reading material with no live slide).
+    if chapter.get("supplement"):
+        p.append(eb.transform(eb.read(chapter["supplement"]), chapter["supplement"],
+                              link_map, heading_shift=1, img_handler=img_handler))
+        p.append("")
+
     if chapter.get("exercise"):
         ex_id = eb.exercise_anchor(chapter)
         p.append(f"## Hands-on exercise — Module {chapter['number']} {{#{ex_id}}}")

@@ -84,6 +84,7 @@
       "number": "09",
       "title": "Skills & Workflows",
       "slide": "slides/part-09-skills-workflows.md",
+      "supplement": "book/supplements/09-claude-plugins.md",
       "exercise": "exercises/part-09/README.md",
       "solution": "exercises/part-09/solution/README.md"
     },

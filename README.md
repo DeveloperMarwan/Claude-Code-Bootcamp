@@ -102,7 +102,7 @@ By the end of the bootcamp you can:
 | 6 | Git Workflows for Safe AI Dev | 22 | Feature Branch Workflow |
 | 7 | Multimodal: Screenshot to UI | 30 | Dashboard UI |
 | 8 | Refactoring & Documentation at Scale | 24 | Refactor + Handoff Docs |
-| 9 | Commands, Hooks & Reusable Workflows | 22 | Personal Claude Skills / Command Library |
+| 9 | Skills, Hooks, MCP & Plugins | 22 | Personal Claude Skills / Command Library |
 | 10 | Production Readiness | 18 | Production Readiness Report |
 | | **Instruction total** | **240** | |
 | 11 | Q&A, exam briefing, next steps (closing block) | 30 | Action plan for Monday |
@@ -121,7 +121,7 @@ The 10 projects students build, in order:
 6. **Feature Branch Workflow** — feature branch + AI-generated commit + PR text
 7. **Dashboard UI** — single-page UI rendered from a wireframe (Python)
 8. **Refactor + Handoff Docs** — refactor a module + `HANDOFF.md` + `ARCHITECTURE.md` (Python)
-9. **Personal Claude Skills / Command Library** — author at least one new SKILL.md
+9. **Personal Claude Skills / Command Library** — author at least one new SKILL.md, and learn how skills, hooks, and MCP servers package into an installable plugin
 10. **Production Readiness Report** — 5-axis report on a prior project
 
 > Module 5's "Code Review Rubric" is the **student-built deliverable** at [`exercises/part-05/code-review-rubric.md`](exercises/part-05/code-review-rubric.md). The **instructor grading rubric** lives at [`assessments/rubric.md`](assessments/rubric.md). They are different artifacts.
