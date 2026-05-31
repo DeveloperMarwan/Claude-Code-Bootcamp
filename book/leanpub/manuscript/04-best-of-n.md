@@ -20,7 +20,7 @@ Module 04 · 30 min
 
 ### Best-of-N, scored
 
-![Best-of-N: generate N candidates, score on Correctness, Simplicity, Fit, pick the winner](resources/04-bon-scoring.png)
+![Best-of-N: generate N candidates, score on Correctness, Simplicity, Fit, pick the winner](04-bon-scoring.png)
 
 Generate **N** independent candidates → score on **Correctness · Simplicity · Fit** → keep the winner.
 

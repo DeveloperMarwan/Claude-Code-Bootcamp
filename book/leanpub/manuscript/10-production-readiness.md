@@ -18,7 +18,7 @@ Score every shipping candidate on five axes that **always** matter:
 
 ### The five readiness axes
 
-![Five production-readiness axes: Security, Observability, Deployment, Runbooks, Rollback](resources/10-five-axes.png)
+![Five production-readiness axes: Security, Observability, Deployment, Runbooks, Rollback](10-five-axes.png)
 
 **Security · Observability · Deployment · Runbooks · Rollback** → one go/no-go verdict.
 

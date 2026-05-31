@@ -21,7 +21,7 @@ A production prompt has **four parts — skip one and quality drops**:
 
 ### Anatomy of a GCOE prompt
 
-![GCOE prompt anatomy: Goal, Constraints, Output, Examples](resources/02-prompt-anatomy.png)
+![GCOE prompt anatomy: Goal, Constraints, Output, Examples](02-prompt-anatomy.png)
 
 **G**oal · **C**onstraints · **O**utput · **E**xamples — skip one and quality drops.
 

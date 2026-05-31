@@ -19,7 +19,7 @@ Two wireframes ship with the exercise: `wireframe.png` (canonical) and `wirefram
 
 ### From wireframe to running UI
 
-![Screenshot-to-UI: layout-first prompt, build, screenshot-diff loop](resources/07-screenshot-to-ui.png)
+![Screenshot-to-UI: layout-first prompt, build, screenshot-diff loop](07-screenshot-to-ui.png)
 
 Layout-first prompt → build → **screenshot-diff loop** (cap at 3 rounds).
 

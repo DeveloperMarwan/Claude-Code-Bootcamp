@@ -20,7 +20,7 @@ Module 08 · 24 min
 
 ### Refactor inside the guardrails
 
-![Constrained refactor: constraints.md fixes what must not change, then two-pass docs](resources/08-refactor-constraints.png)
+![Constrained refactor: constraints.md fixes what must not change, then two-pass docs](08-refactor-constraints.png)
 
 **constraints.md** fixes what must NOT change — write it *before* you touch the code.
 

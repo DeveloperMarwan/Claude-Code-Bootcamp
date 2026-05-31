@@ -19,7 +19,7 @@ Full reference: `skills/git-workflow/SKILL.md`.
 
 ### Branch → atomic commits → PR
 
-![Git flow: branch first, atomic Conventional commits, then a PR](resources/06-git-flow.png)
+![Git flow: branch first, atomic Conventional commits, then a PR](06-git-flow.png)
 
 Branch first · **atomic Conventional commits** · PR explains What · Why · Test · Risk · Rollback.
 

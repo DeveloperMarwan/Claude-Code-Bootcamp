@@ -16,7 +16,10 @@ file:
 Markua specifics applied here:
     * Chapter heading is a single top-level '#'; body headings shift down one.
     * No manual table of contents (Leanpub generates it).
-    * Images live in ``resources/`` and are referenced as ``resources/NAME.png``.
+    * Images live in ``resources/`` and are referenced by *bare filename*
+      (``![](NAME.png)``) — the canonical Markua form. Leanpub's published
+      generator resolves bare names against ``resources/``; a ``resources/``
+      path prefix is only loosely tolerated and breaks some render paths.
     * Intra-chapter cross-links get explicit ``{#id}`` heading attributes.
     * ``{frontmatter}`` / ``{mainmatter}`` / ``{backmatter}`` mark the sections.
 
@@ -95,7 +98,9 @@ def rasterise_svg(src: Path, dst: Path) -> bool:
 # Image handler: copy raster images, rasterise SVGs, into resources/
 # --------------------------------------------------------------------------- #
 class ResourceCollector:
-    """Maps repo-relative image paths to ``resources/NAME.png`` targets."""
+    """Copies images into ``resources/`` and maps them to bare ``NAME.png``
+    references (the canonical Markua form Leanpub resolves against
+    ``resources/``)."""
 
     def __init__(self, resources_dir: Path) -> None:
         self.resources_dir = resources_dir
@@ -121,7 +126,9 @@ class ResourceCollector:
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(src, dst)
 
-        target = f"resources/{out_name}"
+        # Bare filename: Markua's canonical reference. The file lives in
+        # resources/ on disk, but Leanpub resolves the bare name there.
+        target = out_name
         self.cache[repo_rel] = target
         return target
 

@@ -57,7 +57,7 @@ Every module today repeats the same 5 steps:
 
 ### The loop you'll repeat all day
 
-![The five-step Claude Code loop: Plan, Implement, Test, Review, Commit](resources/01-tcc-loop.png)
+![The five-step Claude Code loop: Plan, Implement, Test, Review, Commit](01-tcc-loop.png)
 
 **Plan → Implement → Test → Review → Commit.** Skipping **Review** is how AI bugs ship.
 

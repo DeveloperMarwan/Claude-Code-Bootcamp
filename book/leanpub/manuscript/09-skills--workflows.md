@@ -17,7 +17,7 @@ Module 09 · 22 min
 
 ### The four power-ups
 
-![Agentic engineering pillars: Skills, Hooks, MCP, Multi-agent](resources/09-skills-catalogue.png)
+![Agentic engineering pillars: Skills, Hooks, MCP, Multi-agent](09-skills-catalogue.png)
 
 **Skills · Hooks · MCP · Multi-agent** — Skills are the one you'll reuse most.
 

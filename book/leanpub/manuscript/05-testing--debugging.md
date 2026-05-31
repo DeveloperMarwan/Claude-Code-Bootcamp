@@ -18,7 +18,7 @@ Module 05 · 28 min
 
 ### The test-and-review loop
 
-![Test and debug loop: write tests, find the bug, self-review, fix, re-run](resources/05-test-debug-loop.png)
+![Test and debug loop: write tests, find the bug, self-review, fix, re-run](05-test-debug-loop.png)
 
 Tests → find the bug → **self-review as a stranger** → fix → re-run until green.
 

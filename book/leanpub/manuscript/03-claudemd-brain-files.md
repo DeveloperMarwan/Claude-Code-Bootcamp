@@ -24,7 +24,7 @@ Five sections earn their place:
 
 ### CLAUDE.md at a glance
 
-![CLAUDE.md cheat sheet: Stack, Conventions, Commands, Do-not, Glossary](resources/03-claude-md-cheatsheet.png)
+![CLAUDE.md cheat sheet: Stack, Conventions, Commands, Do-not, Glossary](03-claude-md-cheatsheet.png)
 
 Five sections — **Stack · Conventions · Commands · Do-not · Glossary** — under 80 lines.
 

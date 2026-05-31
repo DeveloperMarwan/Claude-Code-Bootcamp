@@ -79,16 +79,22 @@ check("LP-3",
       "{frontmatter}" in fm and "{mainmatter}" in fm and "{backmatter}" in bm,
       "expected {frontmatter}+{mainmatter} in frontmatter.md and {backmatter} in appendix")
 
-# LP-4: every resources/ image reference resolves to a real file.
-img_re = re.compile(r"!\[[^\]]*\]\((resources/[^)\s]+)\)")
+# LP-4: every local image reference resolves to a file in resources/.
+# Markua canonical form is the bare filename (![](NAME.png)); a leading
+# resources/ prefix is tolerated here but discouraged in output.
+img_re = re.compile(r"!\[[^\]]*\]\(([^)\s]+\.(?:png|jpe?g|gif|svg))\)")
 broken_img = []
 for f in files:
     for i, t, fence in classify((man / f).read_text(encoding="utf-8")):
         if fence:
             continue
         for m in img_re.finditer(t):
-            if not (man / m.group(1)).is_file():
-                broken_img.append(f"{f}:{m.group(1)}")
+            ref = m.group(1)
+            if ref.startswith(("http://", "https://", "data:")):
+                continue
+            name = ref.split("resources/", 1)[-1]
+            if not (man / "resources" / name).is_file():
+                broken_img.append(f"{f}:{ref}")
 check("LP-4", not broken_img, f"missing image targets {broken_img[:3]}")
 
 # LP-5: intra-file anchor links resolve to a {#id} in the same file.
