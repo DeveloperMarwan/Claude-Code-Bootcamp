@@ -1,9 +1,9 @@
 # Knowledge Quiz
 
-> 20 items. One topic per module — 2 items per module across the 10 modules.
+> 20 multiple-choice items. One topic per module — 2 items per module across the 10 modules.
 > Choose the **single best** answer unless the question states otherwise.
-> Submit your answers in `assessments/quiz-answers.md` as a list of `Q1: A`, `Q2: C`, ...
-> Graded against [`answer-key.md`](answer-key.md). Worth 40% of the final score.
+> Answer every question, then self-check against [`answer.md`](answer.md). Score 2 points per
+> correct answer (40 max), then convert: `(raw / 40) × 100`. Worth 40% of the final score.
 
 ---
 
