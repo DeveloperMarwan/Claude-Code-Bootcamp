@@ -66,7 +66,19 @@
       "title": "Refactor & Docs",
       "slide": "slides/part-08-refactor-docs.md",
       "exercise": "exercises/part-08/README.md",
-      "solution": "exercises/part-08/solution/README.md"
+      "solution": "exercises/part-08/solution/README.md",
+      "code_figures": [
+        {
+          "caption": "Before — the deliberately messy original (pricing.py)",
+          "path": "exercises/part-08/solution/before/pricing.py",
+          "format": "python"
+        },
+        {
+          "caption": "After — the constrained refactor (same 8 tests stay green)",
+          "path": "exercises/part-08/solution/after/pricing.py",
+          "format": "python"
+        }
+      ]
     },
     {
       "number": "09",
@@ -91,6 +103,7 @@
     }
   ],
   "back_matter": {
-    "skills": "skills/README.md"
+    "skills": "skills/README.md",
+    "assessments": "assessments/knowledge-quiz.md"
   }
 }

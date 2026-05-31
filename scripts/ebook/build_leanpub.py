@@ -222,6 +222,11 @@ def chapter_md(chapter: dict, include_solutions: bool, link_map: dict,
         p.append(eb.transform(eb.read(chapter["solution"]), chapter["solution"],
                               link_map, heading_shift=1, img_handler=img_handler))
         p.append("")
+        figures = eb.code_figures(chapter)
+        if figures:
+            p.append(f"## Reference code — Module {chapter['number']}")
+            p.append("")
+            p.extend(figures)
 
     return eb.collapse_blank_lines("\n".join(p)).strip() + "\n"
 
@@ -239,6 +244,16 @@ def back_matter_md(manifest: dict, link_map: dict, img_handler) -> str:
         "above. Keep practicing the Plan → Implement → Test → Review → Commit "
         "loop on your own projects."
     )
+    p.append("")
+    return eb.collapse_blank_lines("\n".join(p)).strip() + "\n"
+
+
+def assessments_md(manifest: dict, link_map: dict, img_handler) -> str:
+    """Appendix B — the self-grading Knowledge Quiz (answers stay in the repo)."""
+    back = manifest.get("back_matter", {})
+    p: list[str] = ["# Appendix B — Knowledge Quiz", ""]
+    p.append(eb.transform(eb.read(back["assessments"]), back["assessments"],
+                          link_map, heading_shift=1, img_handler=img_handler))
     p.append("")
     return eb.collapse_blank_lines("\n".join(p)).strip() + "\n"
 
@@ -276,6 +291,13 @@ def build(manifest: dict, out_dir: Path, include_solutions: bool) -> None:
     (manuscript / appendix_name).write_text(
         back_matter_md(manifest, link_map, collector), encoding="utf-8")
     files.append(appendix_name)
+
+    # Appendix B — Knowledge Quiz (optional).
+    if manifest.get("back_matter", {}).get("assessments"):
+        quiz_name = "appendix-b-knowledge-quiz.md"
+        (manuscript / quiz_name).write_text(
+            assessments_md(manifest, link_map, collector), encoding="utf-8")
+        files.append(quiz_name)
 
     # Book.txt (full book) and Sample.txt (front matter + first chapter).
     (manuscript / "Book.txt").write_text("\n".join(files) + "\n", encoding="utf-8")

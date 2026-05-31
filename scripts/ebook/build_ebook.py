@@ -57,8 +57,11 @@ def validate_sources(manifest: dict) -> None:
         check(chapter.get("slide"))
         check(chapter.get("exercise"))
         check(chapter.get("solution"))
+        for fig in chapter.get("code_figures", []) or []:
+            check(fig.get("path"))
     back = manifest.get("back_matter", {})
     check(back.get("skills"))
+    check(back.get("assessments"))
 
     if missing:
         fail("missing source file(s):\n  - " + "\n  - ".join(missing))
@@ -386,6 +389,28 @@ def read(rel: str) -> str:
     return (REPO_ROOT / rel).read_text(encoding="utf-8")
 
 
+def code_figures(chapter: dict) -> list[str]:
+    """Render a chapter's ``code_figures`` as captioned fenced code blocks.
+
+    Each referenced file is read verbatim (never transformed) so the exact
+    source appears in the book. Shared by the single-file and Leanpub builders
+    so the before/after code stays identical across both outputs.
+    """
+    out: list[str] = []
+    for fig in chapter.get("code_figures", []) or []:
+        caption = fig.get("caption", "")
+        fmt = fig.get("format", "")
+        body = read(fig["path"]).rstrip("\n")
+        if caption:
+            out.append(f"**{caption}**")
+            out.append("")
+        out.append(f"```{fmt}")
+        out.append(body)
+        out.append("```")
+        out.append("")
+    return out
+
+
 def build_front_matter(manifest: dict, include_solutions: bool,
                        link_map: dict) -> str:
     meta = manifest["metadata"]
@@ -451,6 +476,8 @@ def build_front_matter(manifest: dict, include_solutions: bool,
         anchor = chapter_anchor(chapter)
         parts.append(f"{int(chapter['number'])}. [{chapter['number']}. {chapter['title']}](#{anchor})")
     parts.append("- [Appendix A — Skills Library](#appendix-a--skills-library)")
+    if manifest.get("back_matter", {}).get("assessments"):
+        parts.append("- [Appendix B — Knowledge Quiz](#appendix-b--knowledge-quiz)")
     parts.append("")
 
     return "\n".join(parts)
@@ -480,6 +507,11 @@ def build_chapter(chapter: dict, include_solutions: bool,
         parts.append("")
         parts.append(transform(read(chapter["solution"]), chapter["solution"], link_map))
         parts.append("")
+        figures = code_figures(chapter)
+        if figures:
+            parts.append(f"#### Reference code — Module {chapter['number']}")
+            parts.append("")
+            parts.extend(figures)
 
     return "\n".join(parts)
 
@@ -502,6 +534,13 @@ def build_back_matter(manifest: dict, link_map: dict) -> str:
         "loop on your own projects."
     )
     parts.append("")
+
+    # Appendix B — Knowledge Quiz (self-grading; answers live in the repo).
+    if back.get("assessments"):
+        parts.append("## Appendix B — Knowledge Quiz")
+        parts.append("")
+        parts.append(transform(read(back["assessments"]), back["assessments"], link_map))
+        parts.append("")
 
     return "\n".join(parts)
 

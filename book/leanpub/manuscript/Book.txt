@@ -11,3 +11,4 @@ frontmatter.md
 10-production-readiness.md
 11-qa--next-steps.md
 appendix-a-skills-library.md
+appendix-b-knowledge-quiz.md

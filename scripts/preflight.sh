@@ -475,7 +475,11 @@ gate_cross_links() {
       esac
       target="${target%/}"
       if [ ! -e "$target" ] && [ ! -e "${target}/" ]; then
-        printf '%s:%s -> %s  (unresolved)\n' "$file" "$lineno" "$link" >> /tmp/preflight.cross-links.$$
+        # Markua (Leanpub) resolves bare image filenames against a sibling
+        # resources/ directory, so check there before flagging unresolved.
+        if [ ! -e "$dir/resources/$link" ]; then
+          printf '%s:%s -> %s  (unresolved)\n' "$file" "$lineno" "$link" >> /tmp/preflight.cross-links.$$
+        fi
       fi
     done
   done
