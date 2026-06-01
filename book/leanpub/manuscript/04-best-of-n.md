@@ -81,7 +81,7 @@ Track A: Python (FastAPI + Pydantic v2). Track B: Node (Hono + Zod + better-sqli
 **Next** — we trust the winner only after we *test* it and review like a stranger's PR.
 **Module 5 — Testing, Debugging & Self-Review.**
 
-## Hands-on exercise — Module 04 {#hands-on-exercise--module-04}
+## Hands-on exercise {#hands-on-exercise--module-04}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-04/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-04/README.md).
 > Reference solution: [`exercises/part-04/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-04/solution/README.md).
@@ -235,7 +235,7 @@ Add a **third** independent candidate (`candidate-c/`) — N = 3 is the real Bes
 | Track A: Pydantic v1 imports | Re-prompt with "Pydantic v2" reinforced. |
 | `404` returns `{"detail":{"error":"not found"}}` not `{"error":"not found"}` | FastAPI wraps `detail`. A candidate that fixes this scores higher on **Fit** — see the solution's Review gotcha. |
 
-## Solution — Module 04 {#solution--module-04}
+## Solution {#solution--module-04}
 
 > **Stop**: only open this after you have produced your own two candidates, filled in `scoring.md`, and chosen a winner.
 

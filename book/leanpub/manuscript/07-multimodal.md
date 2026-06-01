@@ -80,7 +80,7 @@ Run the **visual-diff loop** at least once; record patches in `diff-notes.md`.
 **Next** — we take messy code and make it clean *under constraints*, then document it.
 **Module 8 — Refactoring & Documentation at Scale.**
 
-## Hands-on exercise — Module 07 {#hands-on-exercise--module-07}
+## Hands-on exercise {#hands-on-exercise--module-07}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-07/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-07/README.md).
 > Reference solution: [`exercises/part-07/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-07/solution/README.md).
@@ -188,7 +188,7 @@ Theme the dashboard (light + dark) using only plain CSS variables. Document the 
 | Streamlit sidebar collapses oddly | Use `st.sidebar` explicitly; layout is constrained — that's expected. |
 | `pip install flask` fails (pyexpat / Python 3.14) | Use uv instead: `uv run --with flask python app.py` (or `uv run --with streamlit streamlit run app.py`) — no global install needed. |
 
-## Solution — Module 07 {#solution--module-07}
+## Solution {#solution--module-07}
 
 Single-page Dashboard rendered with Flask + plain CSS. Matches `wireframe.png`.
 

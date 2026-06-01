@@ -73,7 +73,7 @@ List concrete bugs with file, line, and a minimal fix. Don't say "looks good".
 **Next** — tested code earns a safe path to main: branches, atomic commits, a real PR.
 **Module 6 — Git Workflows for Safe AI Dev.**
 
-## Hands-on exercise — Module 05 {#hands-on-exercise--module-05}
+## Hands-on exercise {#hands-on-exercise--module-05}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-05/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-05/README.md).
 > Reference solution: [`exercises/part-05/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-05/solution/README.md).
@@ -195,7 +195,7 @@ Add property-based tests using `hypothesis` (Python) or `fast-check` (Node) for 
 | Rubric reads like prose | Convert each item to a yes/no question. |
 | Confused which rubric is which | Student rubric = this folder. Instructor rubric = `assessments/rubric.md`. |
 
-## Solution — Module 05 {#solution--module-05}
+## Solution {#solution--module-05}
 
 > **Stop**: only open this after you have produced your own `tests/`, `BUGS.md` fix, and `code-review-rubric.md`.
 

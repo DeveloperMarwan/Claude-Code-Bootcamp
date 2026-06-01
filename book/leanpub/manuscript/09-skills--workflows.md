@@ -178,7 +178,7 @@ at the repository. Your personal carry-out from the bootcamp becomes something
 your whole team can install with a single line — which is exactly the leap from
 *using* Claude Code to *engineering* with it that this module is about.
 
-## Hands-on exercise — Module 09 {#hands-on-exercise--module-09}
+## Hands-on exercise {#hands-on-exercise--module-09}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-09/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-09/README.md).
 > Reference solution: [`exercises/part-09/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-09/solution/README.md).
@@ -291,7 +291,7 @@ Run the same verification with a **multi-agent fan-out**: a "lead" plus two "wor
 | No GitHub MCP server configured | Run the action in dry-run and record the exact tool call + arguments. The point is scoping, not the network round-trip. |
 | MCP brief balloons past 5 lines | The task is too big. One repo, one issue, one stop condition. |
 
-## Solution — Module 09 {#solution--module-09}
+## Solution {#solution--module-09}
 
 > **Stop**: only open this after you have authored your own `notes-api-smoke` skill, wired the hook, and run the MCP action.
 

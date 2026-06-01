@@ -77,7 +77,7 @@ Pick **one** project from today (likely Module 4) and assess it:
 **Next** — that's the loop, ten times over. We close with Q&A and Monday.
 **Part 11 — Q&A & Next Steps.**
 
-## Hands-on exercise — Module 10 {#hands-on-exercise--module-10}
+## Hands-on exercise {#hands-on-exercise--module-10}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-10/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-10/README.md).
 > Reference solution: [`exercises/part-10/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-10/solution/README.md).
@@ -145,7 +145,7 @@ For one "yellow" axis, actually do the smallest next step. Commit the change. Do
 | Report > 1 page | Trim. One line per axis component if needed. |
 | No verdict | The verdict is the point. Add it. |
 
-## Solution — Module 10 {#solution--module-10}
+## Solution {#solution--module-10}
 
 > **Stop**: only open this after you have produced your own `readiness-report.md` against a prior module.
 

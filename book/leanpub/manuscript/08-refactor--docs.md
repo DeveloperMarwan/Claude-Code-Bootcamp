@@ -82,7 +82,7 @@ public signatures, file count, or behavior. Tests must stay green. Show the diff
 **Next** — we graduate from prompts to *agentic engineering*: Skills, Hooks, MCP, multi-agent.
 **Module 9 — Skills, Hooks, MCP & Multi-Agent Workflows.**
 
-## Hands-on exercise — Module 08 {#hands-on-exercise--module-08}
+## Hands-on exercise {#hands-on-exercise--module-08}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-08/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-08/README.md).
 > Reference solution: [`exercises/part-08/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-08/solution/README.md).
@@ -178,7 +178,7 @@ Run the **unconstrained** refactor first. Save its diff. Compare line counts and
 | Docs describe the prompt, not the diff | Always paste the **diff** as input, not the prompt. |
 | `ARCHITECTURE.md` is 200 lines | Hard cap at 80; trim limitations + paragraphs. |
 
-## Solution — Module 08 {#solution--module-08}
+## Solution {#solution--module-08}
 
 The `before/` folder contains a deliberately messy `pricing.py` and a passing test suite. Students copy it to `module-08/after/` and refactor under hard constraints. The `after/` folder here is a **reference refactor** (a real constrained-refactor run) — same tests, same behaviour, readable code.
 
@@ -196,7 +196,7 @@ All tests must remain green after the refactor — that's the contract. Both `be
 
 A reference `HANDOFF.md` and `ARCHITECTURE.md` live below; instructors compare student output against them but accept any version that satisfies the deliverable checklist in the exercise README.
 
-## Reference code — Module 08
+## Reference code
 
 **Before — the deliberately messy original (pricing.py)**
 

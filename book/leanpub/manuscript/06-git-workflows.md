@@ -86,7 +86,7 @@ Take your Module 5 work onto a feature branch and ship a clean history:
 **Next** — code is safe in git. Now we feed Claude a *picture* and build a UI.
 **Module 7 — Multimodal: Screenshot to UI.**
 
-## Hands-on exercise — Module 06 {#hands-on-exercise--module-06}
+## Hands-on exercise {#hands-on-exercise--module-06}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-06/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-06/README.md).
 > Reference solution: [`exercises/part-06/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-06/solution/README.md).
@@ -177,7 +177,7 @@ Use the `skills/git-workflow/SKILL.md` skill against the same diff and compare i
 | PR text says *what* but not *why* | Re-prompt with the diff *and* an explicit "explain why" instruction. |
 | Pushed to `main` | Reset, branch, force-push to your feature branch only. |
 
-## Solution — Module 06 {#solution--module-06}
+## Solution {#solution--module-06}
 
 > **Stop**: only open this after you have split your dirty tree into atomic commits and drafted `pr.md`.
 

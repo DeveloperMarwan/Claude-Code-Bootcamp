@@ -124,7 +124,7 @@ Write a `CLAUDE.md` for your Module 2 repo (or a personal repo):
 **Next** — with rules in place, we generate *several* solutions and pick the best.
 **Module 4 — Build Faster with Best-of-N.**
 
-## Hands-on exercise — Module 03 {#hands-on-exercise--module-03}
+## Hands-on exercise {#hands-on-exercise--module-03}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-03/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-03/README.md).
 > Reference solution: [`exercises/part-03/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-03/solution/README.md).
@@ -245,7 +245,7 @@ Extend the trim test to *every* section: delete each one in turn, re-prompt, and
 | Claude ignores the file | Confirm it's at repo root and you're in a fresh chat. |
 | Proof screenshot is unconvincing | Re-pick a convention that produces a visible diff in output. |
 
-## Solution — Module 03 {#solution--module-03}
+## Solution {#solution--module-03}
 
 > **Stop**: only open this after you have authored your own `module-03/CLAUDE.md`.
 

@@ -98,7 +98,7 @@ task delete <id>
 **Next** — a good prompt is per-task. Now we make Claude follow your repo's rules *automatically*.
 **Module 3 — Project Context with CLAUDE.md.**
 
-## Hands-on exercise — Module 02 {#hands-on-exercise--module-02}
+## Hands-on exercise {#hands-on-exercise--module-02}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-02/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-02/README.md).
 > Reference solution: [`exercises/part-02/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-02/solution/README.md).
@@ -200,7 +200,7 @@ Add `task list --status open` and `task list --status done` filters. Document th
 | Node track: `tsx` not found | `npm i -D tsx`. |
 | Python track: third-party deps appeared | Re-prompt with the "stdlib only" constraint reinforced. |
 
-## Solution — Module 02 {#solution--module-02}
+## Solution {#solution--module-02}
 
 > **Stop**: only open this after you have produced `module-02/cli.py` (or `cli.js`) and `PROMPT.md`.
 

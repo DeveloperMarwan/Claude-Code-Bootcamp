@@ -649,10 +649,13 @@ def chapter_sections(chapter: dict, include_solutions: bool, link_map: dict,
         parts.append(render(chapter["supplement"]))
         parts.append("")
 
-    # US2: embedded exercise.
+    # US2: embedded exercise. Leanpub carries an explicit {#anchor}, so its
+    # visible heading can stay short ("Hands-on exercise"); the single-file
+    # ebook keeps the "— Module NN" suffix to keep its auto-anchors unique.
     if chapter.get("exercise"):
-        parts.append(wrapper(f"Hands-on exercise — Module {chapter['number']}",
-                             exercise_anchor(chapter)))
+        ex_label = ("Hands-on exercise" if anchored
+                    else f"Hands-on exercise — Module {chapter['number']}")
+        parts.append(wrapper(ex_label, exercise_anchor(chapter)))
         parts.append("")
         parts.extend(companion_callout(manifest, chapter, include_solutions))
         parts.append(strip_leading_heading(render(chapter["exercise"])))
@@ -660,14 +663,17 @@ def chapter_sections(chapter: dict, include_solutions: bool, link_map: dict,
 
     # US2: reference solution appendix.
     if include_solutions and chapter.get("solution"):
-        parts.append(wrapper(f"Solution — Module {chapter['number']}",
-                             solution_anchor(chapter)))
+        sol_label = ("Solution" if anchored
+                     else f"Solution — Module {chapter['number']}")
+        parts.append(wrapper(sol_label, solution_anchor(chapter)))
         parts.append("")
         parts.append(strip_leading_heading(render(chapter["solution"])))
         parts.append("")
         figures = code_figures(chapter)
         if figures:
-            parts.append(f"{h_refcode} Reference code — Module {chapter['number']}")
+            refcode_label = ("Reference code" if anchored
+                             else f"Reference code — Module {chapter['number']}")
+            parts.append(f"{h_refcode} {refcode_label}")
             parts.append("")
             parts.extend(figures)
 

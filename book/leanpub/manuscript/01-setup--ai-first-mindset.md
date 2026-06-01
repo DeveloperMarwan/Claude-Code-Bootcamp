@@ -189,7 +189,7 @@ End with one sentence on why skipping Review is the most common failure mode.
 **Next** — we apply step 1 (**Plan**) by writing prompts a Tech Lead would sign off on.
 **Module 2 — Prompting Like a Tech Lead.**
 
-## Hands-on exercise — Module 01 {#hands-on-exercise--module-01}
+## Hands-on exercise {#hands-on-exercise--module-01}
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-01/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-01/README.md).
 > Reference solution: [`exercises/part-01/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-01/solution/README.md).
@@ -286,7 +286,7 @@ Write a second paragraph in `loop-notes.md` describing one situation in your day
 | WSL2 issues | Always run inside the Ubuntu shell, never PowerShell. |
 | Claude Code unresponsive | Verify you're authenticated; pair with a neighbor for module 1 only. |
 
-## Solution — Module 01 {#solution--module-01}
+## Solution {#solution--module-01}
 
 > **Stop**: only open this after you have produced your own `module-01/` deliverable.
 
