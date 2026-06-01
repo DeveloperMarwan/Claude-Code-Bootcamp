@@ -121,7 +121,7 @@ SPEAKER NOTES — slide 5 (demo, 4 min)
 
 **Be ready to:**
 
-- Name the five May 2026 pillars from memory: **Skills · Hooks · MCP · GitHub Actions · Multi-agent**.
+- Name the five pillars from memory: **Skills · Hooks · MCP · GitHub Actions · Multi-agent**.
 - Answer in one sentence: *"What will I try in my own repo on Monday?"*
 
 <!--
@@ -133,11 +133,11 @@ SPEAKER NOTES — slide 6 (exam, 3 min)
 
 <!-- _class: tpl-show -->
 
-## Future-proof · Keep an eye on (May 2026 → beyond)
+## Future-proof · Keep an eye on
 
 The tools change monthly; the **habits** don't. What to watch — and the trick that compounds:
 
-| Watch in 2026 | Trick that makes life better |
+| Watch for | Trick that makes life better |
 |---|---|
 | **Shared skill libraries** across teams | Keep a `skills/` folder in every repo — borrow habits, don't reinvent |
 | **MCP servers** for more of your stack | Wire issue tracker · CI · observability in once; verify with `/mcp` |
@@ -149,7 +149,7 @@ The tools change monthly; the **habits** don't. What to watch — and the trick 
 
 <!--
 SPEAKER NOTES — slide 7 (future-proof, 2 min)
-- Theme: chase habits, not features. Every 2026 capability amplifies the loop, never replaces the reviewer.
+- Theme: chase habits, not features. Every new capability amplifies the loop, never replaces the reviewer.
 - Tell them to bookmark the repo's skills/ folder as their starting point Monday.
 -->
 
@@ -185,7 +185,7 @@ SPEAKER NOTES — slide 8 (3 min)
 
 - [ ] Three assessment artefacts in the submission zip.
 - [ ] Weighted score ≥ 70% against the rubric.
-- [ ] Can name the five May 2026 pillars from memory.
+- [ ] Can name the five pillars from memory.
 - [ ] Have your one-sentence Monday answer.
 
 **Thank you.** You direct, you review, you merge — you're the engineer of record. Go ship.

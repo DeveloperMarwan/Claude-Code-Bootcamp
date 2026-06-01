@@ -71,7 +71,7 @@ SPEAKER NOTES — slide 3 (instructor, 1 min)
 
 <!-- _class: tpl-show -->
 
-## Anthropic & the Claude models (May 2026)
+## Anthropic & the Claude models
 
 **Anthropic** builds Claude — frontier models with a safety-first focus. **Claude Code** is their agentic coding tool.
 
@@ -134,7 +134,7 @@ SPEAKER NOTES — slide 6 (diagram, 1 min)
 
 <!-- _class: tpl-show -->
 
-## Reference · Claude Code is everywhere (May 2026)
+## Reference · Claude Code is everywhere
 
 Claude Code ships on **four surfaces** with one shared context:
 

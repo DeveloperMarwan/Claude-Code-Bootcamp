@@ -3,7 +3,7 @@
 # How to use this book
 
 *Claude Code Bootcamp — Build 10 Real-World Projects with Claude Code*  
-Instructor: Luca Berton · Edition: May 2026
+Instructor: Luca Berton · Edition: First Edition
 
 This book is the complete Claude Code Bootcamp. It compiles the workshop's eleven parts into continuous prose, with the hands-on exercises embedded in each chapter so you can build as you read. You direct Claude Code; it implements; you review and merge. You are always the engineer of record.
 

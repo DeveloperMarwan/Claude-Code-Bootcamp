@@ -72,7 +72,7 @@ You direct. Claude implements. You review and merge. **You are always the engine
 
 🔗 [lucaberton.com](https://lucaberton.com/)
 
-## Anthropic & the Claude models (May 2026)
+## Anthropic & the Claude models
 
 **Anthropic** builds Claude — frontier models with a safety-first focus. **Claude Code** is their agentic coding tool.
 
@@ -106,7 +106,7 @@ Every module today repeats the same 5 steps:
 
 **Plan → Implement → Test → Review → Commit.** Skipping **Review** is how AI bugs ship.
 
-## Reference · Claude Code is everywhere (May 2026)
+## Reference · Claude Code is everywhere
 
 Claude Code ships on **four surfaces** with one shared context:
 

@@ -49,11 +49,11 @@ Fix only this; keep all other behavior. Show the diff.
 
 **Success signal**: the precise prompt fixes it in one pass; the vague loop doesn't.
 
-## Future-proof · Keep an eye on (May 2026 → beyond)
+## Future-proof · Keep an eye on
 
 The tools change monthly; the **habits** don't. What to watch — and the trick that compounds:
 
-| Watch in 2026 | Trick that makes life better |
+| Watch for | Trick that makes life better |
 |---|---|
 | **Shared skill libraries** across teams | Keep a `skills/` folder in every repo — borrow habits, don't reinvent |
 | **MCP servers** for more of your stack | Wire issue tracker · CI · observability in once; verify with `/mcp` |
@@ -79,7 +79,7 @@ Then:
 
 **Definition of done — the whole bootcamp**
 
-- [ ] Can name the five May 2026 pillars from memory.
+- [ ] Can name the five pillars from memory.
 - [ ] Have your one-sentence Monday answer.
 
 **Thank you.** You direct, you review, you merge — you're the engineer of record. Go ship.

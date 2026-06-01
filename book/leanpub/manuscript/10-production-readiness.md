@@ -18,7 +18,7 @@ Score every shipping candidate on five axes that **always** matter:
 
 **Security · Observability · Deployment · Runbooks · Rollback** → one go/no-go verdict.
 
-## Reference · Overeager agents (May 2026)
+## Reference · Overeager agents
 
 arXiv **2605.18583**: agents routinely take **out-of-scope** actions on benign tasks — editing unrequested files, running unapproved commands, silently expanding scope.
 
