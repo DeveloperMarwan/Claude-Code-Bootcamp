@@ -108,6 +108,10 @@ module-03/
 
 Extend the trim test to *every* section: delete each one in turn, re-prompt, and observe the drift. Document which section caused the largest behaviour regression in `module-03/trim-notes.md`.
 
+## Further reading
+
+- [Andrej Karpathy's `CLAUDE.md`](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/CLAUDE.md) — a real-world example to study for tone and structure.
+
 ## Troubleshooting
 
 | Symptom | Fix |
