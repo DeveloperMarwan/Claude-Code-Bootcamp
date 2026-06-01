@@ -16,6 +16,7 @@
       "number": "01",
       "title": "Setup & AI-First Mindset",
       "slide": "slides/part-01-setup-mindset.md",
+      "intro": "book/supplements/01-installing-claude-code.md",
       "exercise": "exercises/part-01/README.md",
       "solution": "exercises/part-01/solution/README.md"
     },

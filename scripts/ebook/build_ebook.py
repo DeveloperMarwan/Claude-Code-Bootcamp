@@ -55,6 +55,7 @@ def validate_sources(manifest: dict) -> None:
     check(manifest.get("front_matter", {}).get("source"))
     for chapter in manifest.get("chapters", []):
         check(chapter.get("slide"))
+        check(chapter.get("intro"))
         check(chapter.get("supplement"))
         check(chapter.get("exercise"))
         check(chapter.get("solution"))
@@ -574,9 +575,9 @@ def chapter_sections(chapter: dict, include_solutions: bool, link_map: dict,
     """Assemble one chapter's body as a list of Markdown blocks.
 
     Shared by the single-file ebook and the Leanpub manuscript builders so the
-    chapter structure (slide → supplement → exercise → solution → reference
-    code) stays identical across both outputs. The two builders differ only in
-    presentation, expressed through the keyword arguments:
+    chapter structure (intro → slide → supplement → exercise → solution →
+    reference code) stays identical across both outputs. The two builders differ
+    only in presentation, expressed through the keyword arguments:
 
     * ``chapter_level``  heading depth of the chapter title (2 for the ebook's
       ``##``; 1 for Leanpub's per-file ``#``). Section wrappers sit one level
@@ -606,6 +607,13 @@ def chapter_sections(chapter: dict, include_solutions: bool, link_map: dict,
         return f"{h_section} {title}{suffix}"
 
     parts: list[str] = [f"{h_chapter} {chapter['number']}. {chapter['title']}", ""]
+
+    # Book-only intro (e.g. installation/setup prose with no live slide),
+    # rendered before the slide body so it reads as the chapter's opening.
+    if chapter.get("intro"):
+        parts.append(render(chapter["intro"]))
+        parts.append("")
+
     parts.append(render(chapter["slide"]))
     parts.append("")
 
