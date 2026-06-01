@@ -199,44 +199,14 @@ def front_matter_md(manifest: dict, include_solutions: bool) -> str:
 
 def chapter_md(chapter: dict, include_solutions: bool, link_map: dict,
                img_handler, manifest: dict) -> str:
-    p: list[str] = [f"# {chapter['number']}. {chapter['title']}", ""]
-
-    body = eb.transform(eb.read(chapter["slide"]), chapter["slide"],
-                        link_map, heading_shift=1, img_handler=img_handler)
-    p.append(body)
-    p.append("")
-
-    # Book-only supplement (reading material with no live slide).
-    if chapter.get("supplement"):
-        p.append(eb.transform(eb.read(chapter["supplement"]), chapter["supplement"],
-                              link_map, heading_shift=1, img_handler=img_handler))
-        p.append("")
-
-    if chapter.get("exercise"):
-        ex_id = eb.exercise_anchor(chapter)
-        p.append(f"## Hands-on exercise — Module {chapter['number']} {{#{ex_id}}}")
-        p.append("")
-        p.extend(eb.companion_callout(manifest, chapter, include_solutions))
-        p.append(eb.strip_leading_heading(eb.transform(
-            eb.read(chapter["exercise"]), chapter["exercise"],
-            link_map, heading_shift=1, img_handler=img_handler)))
-        p.append("")
-
-    if include_solutions and chapter.get("solution"):
-        sol_id = eb.solution_anchor(chapter)
-        p.append(f"## Solution — Module {chapter['number']} {{#{sol_id}}}")
-        p.append("")
-        p.append(eb.strip_leading_heading(eb.transform(
-            eb.read(chapter["solution"]), chapter["solution"],
-            link_map, heading_shift=1, img_handler=img_handler)))
-        p.append("")
-        figures = eb.code_figures(chapter)
-        if figures:
-            p.append(f"## Reference code — Module {chapter['number']}")
-            p.append("")
-            p.extend(figures)
-
-    return eb.collapse_blank_lines("\n".join(p)).strip() + "\n"
+    # Leanpub: chapter title is a single '#', body headings shift down one,
+    # wrapper headings carry explicit Markua {#id} cross-link anchors, and the
+    # reference-code block sits at the same level as the other section wrappers.
+    parts = eb.chapter_sections(
+        chapter, include_solutions, link_map, manifest,
+        chapter_level=1, heading_shift=1, img_handler=img_handler,
+        anchored=True, refcode_level=2)
+    return eb.collapse_blank_lines("\n".join(parts)).strip() + "\n"
 
 
 def back_matter_md(manifest: dict, link_map: dict, img_handler) -> str:

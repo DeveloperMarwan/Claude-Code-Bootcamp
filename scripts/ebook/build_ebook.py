@@ -567,45 +567,83 @@ def build_front_matter(manifest: dict, include_solutions: bool,
     return "\n".join(parts)
 
 
-def build_chapter(chapter: dict, include_solutions: bool,
-                  link_map: dict, manifest: dict) -> str:
-    parts: list[str] = []
-    parts.append(f"## {chapter['number']}. {chapter['title']}")
+def chapter_sections(chapter: dict, include_solutions: bool, link_map: dict,
+                     manifest: dict, *, chapter_level: int, heading_shift: int,
+                     img_handler=None, anchored: bool = False,
+                     refcode_level: int | None = None) -> list[str]:
+    """Assemble one chapter's body as a list of Markdown blocks.
+
+    Shared by the single-file ebook and the Leanpub manuscript builders so the
+    chapter structure (slide → supplement → exercise → solution → reference
+    code) stays identical across both outputs. The two builders differ only in
+    presentation, expressed through the keyword arguments:
+
+    * ``chapter_level``  heading depth of the chapter title (2 for the ebook's
+      ``##``; 1 for Leanpub's per-file ``#``). Section wrappers sit one level
+      deeper.
+    * ``heading_shift``  how far the embedded source headings are pushed down
+      (passed straight to :func:`transform`).
+    * ``img_handler``    optional image rewriter (Leanpub copies into
+      ``resources/``; the ebook leaves references untouched).
+    * ``anchored``       emit Markua ``{#id}`` attributes on the wrapper
+      headings (Leanpub needs explicit cross-link anchors; the ebook relies on
+      GitHub-style auto-anchors).
+    * ``refcode_level``  heading depth of the "Reference code" block; defaults
+      to the section level.
+    """
+    section_level = chapter_level + 1
+    refcode_level = refcode_level if refcode_level is not None else section_level
+    h_chapter = "#" * chapter_level
+    h_section = "#" * section_level
+    h_refcode = "#" * refcode_level
+
+    def render(rel: str) -> str:
+        return transform(read(rel), rel, link_map,
+                         heading_shift=heading_shift, img_handler=img_handler)
+
+    def wrapper(title: str, anchor: str) -> str:
+        suffix = f" {{#{anchor}}}" if anchored else ""
+        return f"{h_section} {title}{suffix}"
+
+    parts: list[str] = [f"{h_chapter} {chapter['number']}. {chapter['title']}", ""]
+    parts.append(render(chapter["slide"]))
     parts.append("")
 
-    body = transform(read(chapter["slide"]), chapter["slide"], link_map)
-    parts.append(body)
-    parts.append("")
-
-    # Book-only supplement (e.g. material with no slide because it is reading,
-    # not presenting). Rendered at the same heading depth as the slide body.
+    # Book-only supplement (reading material with no live slide), rendered at
+    # the same heading depth as the slide body.
     if chapter.get("supplement"):
-        parts.append(transform(read(chapter["supplement"]), chapter["supplement"],
-                               link_map))
+        parts.append(render(chapter["supplement"]))
         parts.append("")
 
     # US2: embedded exercise.
     if chapter.get("exercise"):
-        parts.append(f"### Hands-on exercise — Module {chapter['number']}")
+        parts.append(wrapper(f"Hands-on exercise — Module {chapter['number']}",
+                             exercise_anchor(chapter)))
         parts.append("")
         parts.extend(companion_callout(manifest, chapter, include_solutions))
-        parts.append(strip_leading_heading(
-            transform(read(chapter["exercise"]), chapter["exercise"], link_map)))
+        parts.append(strip_leading_heading(render(chapter["exercise"])))
         parts.append("")
 
     # US2: reference solution appendix.
     if include_solutions and chapter.get("solution"):
-        parts.append(f"### Solution — Module {chapter['number']}")
+        parts.append(wrapper(f"Solution — Module {chapter['number']}",
+                             solution_anchor(chapter)))
         parts.append("")
-        parts.append(strip_leading_heading(
-            transform(read(chapter["solution"]), chapter["solution"], link_map)))
+        parts.append(strip_leading_heading(render(chapter["solution"])))
         parts.append("")
         figures = code_figures(chapter)
         if figures:
-            parts.append(f"#### Reference code — Module {chapter['number']}")
+            parts.append(f"{h_refcode} Reference code — Module {chapter['number']}")
             parts.append("")
             parts.extend(figures)
 
+    return parts
+
+
+def build_chapter(chapter: dict, include_solutions: bool,
+                  link_map: dict, manifest: dict) -> str:
+    parts = chapter_sections(chapter, include_solutions, link_map, manifest,
+                             chapter_level=2, heading_shift=2, refcode_level=4)
     return "\n".join(parts)
 
 
