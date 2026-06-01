@@ -1,7 +1,5 @@
 # 10. Production Readiness
 
-Module 10 · 18 min
-
 ## Production Readiness
 
 **"It runs on my laptop" is not "ready to ship." Make the call across five axes.**
@@ -86,8 +84,6 @@ Pick **one** project from today (likely Module 4) and assess it:
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-10/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-10/README.md).
 > Reference solution: [`exercises/part-10/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-10/solution/README.md).
 
-## Module 10 — Production Readiness Report
-
 ### Goal
 
 Pick one project from today and write a one-page **Production Readiness Report** with a go / no-go verdict.
@@ -152,8 +148,6 @@ For one "yellow" axis, actually do the smallest next step. Commit the change. Do
 | No verdict | The verdict is the point. Add it. |
 
 ## Solution — Module 10 {#solution--module-10}
-
-## Reference solution — Module 10
 
 > **Stop**: only open this after you have produced your own `readiness-report.md` against a prior module.
 

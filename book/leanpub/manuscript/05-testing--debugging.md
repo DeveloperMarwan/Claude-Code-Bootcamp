@@ -1,7 +1,5 @@
 # 05. Testing & Debugging
 
-Module 05 · 28 min
-
 ## Testing, Debugging & Self-Review
 
 **Untested AI code is a guess. Make Claude review its own work as a stranger's PR.**
@@ -81,8 +79,6 @@ List concrete bugs with file, line, and a minimal fix. Don't say "looks good".
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-05/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-05/README.md).
 > Reference solution: [`exercises/part-05/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-05/solution/README.md).
-
-## Module 5 — Testing, Debugging & Self-Review
 
 ### Goal
 
@@ -203,8 +199,6 @@ Add property-based tests using `hypothesis` (Python) or `fast-check` (Node) for 
 
 ## Solution — Module 05 {#solution--module-05}
 
-## Reference solution — Module 5
-
 > **Stop**: only open this after you have produced your own `tests/`, `BUGS.md` fix, and `code-review-rubric.md`.
 
 This module ships three artefacts:
@@ -267,4 +261,4 @@ There is **no reference** for `code-review-rubric.md` — it is your authored ar
 
 ### Definition of done
 
-See `../README.md`. The `code-review` skill output goes in `REVIEW.md`; at least **one applied fix** must be visible in the working diff.
+See the exercise above. The `code-review` skill output goes in `REVIEW.md`; at least **one applied fix** must be visible in the working diff.

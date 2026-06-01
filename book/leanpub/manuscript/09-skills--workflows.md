@@ -1,14 +1,12 @@
 # 09. Skills & Workflows
 
-Module 09 · 22 min
-
 ## Skills, Hooks, MCP & Multi-Agent
 
 **Stop re-typing workflows. Package them. This is agentic engineering.**
 
 ### Theory · Four pillars of agentic engineering
 
-1. **Skills** — packaged workflows at `skills/<name>/SKILL.md`, invoked with `/<name>`. Your carry-out from today.
+1. **Skills** — packaged workflows at `.claude/skills/<name>/SKILL.md`, invoked with `/<name>`. Your carry-out from today.
 2. **Hooks** — shell commands that fire before/after Claude actions (format, lint, deny dangerous commands).
 3. **MCP** — open connectors to issue trackers, docs, chat, internal tools, read as first-class context.
 4. **Multi-agent** — a lead agent fans work out to workers in separate worktrees.
@@ -187,8 +185,6 @@ your whole team can install with a single line — which is exactly the leap fro
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-09/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-09/README.md).
 > Reference solution: [`exercises/part-09/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-09/solution/README.md).
 
-## Module 9 — Skills, Hooks, MCP & Multi-Agent
-
 ### Goal
 
 Turn the Notes API you built in Module 4 into a **repeatable workflow**: author a skill that smoke-tests it, wire a **hook that actually fires** and blocks a broken commit, then run **one scoped MCP action** against GitHub. Every step produces something you can run and check — no abstract write-ups. Multi-agent fan-out is the stretch.
@@ -205,7 +201,7 @@ You shipped a Notes API in Module 4 and tested it in Module 5. On Monday a teamm
    cp ../part-04/solution/python/winner/notes_api.py module-09/   # or your own
    ```
 2. Read `skills/code-review/SKILL.md` (skill structure) and `skills/mcp-context-brief/SKILL.md` (how to bound an MCP call).
-3. Skim the contract: `specs/001-bootcamp-course-materials/contracts/skill.contract.md`.
+3. Skim the skill contract: valid frontmatter (`name`, `description`) plus six H2 sections — Purpose · When to use · Body · Inputs · Outputs · Worked example.
 4. Work inside `module-09/` from here on.
 
 ### Claude Code prompt to use
@@ -298,8 +294,6 @@ Run the same verification with a **multi-agent fan-out**: a "lead" plus two "wor
 | MCP brief balloons past 5 lines | The task is too big. One repo, one issue, one stop condition. |
 
 ## Solution — Module 09 {#solution--module-09}
-
-## Reference solution — Module 9
 
 > **Stop**: only open this after you have authored your own `notes-api-smoke` skill, wired the hook, and run the MCP action.
 
@@ -431,4 +425,4 @@ verdict and end up re-litigating each other's output.
 
 ### Definition of done
 
-See `../README.md`.
+See the exercise above.

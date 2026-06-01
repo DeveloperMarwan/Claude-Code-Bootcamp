@@ -1,7 +1,5 @@
 # 07. Multimodal
 
-Module 07 · 30 min
-
 ## Multimodal: Screenshot to UI
 
 **Claude can read a picture. Hand it a wireframe; get a working UI back.**
@@ -88,8 +86,6 @@ Run the **visual-diff loop** at least once; record patches in `diff-notes.md`.
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-07/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-07/README.md).
 > Reference solution: [`exercises/part-07/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-07/solution/README.md).
-
-## Module 7 — Multimodal: Screenshot to UI
 
 ### Goal
 
@@ -195,8 +191,6 @@ Theme the dashboard (light + dark) using only plain CSS variables. Document the 
 | `pip install flask` fails (pyexpat / Python 3.14) | Use uv instead: `uv run --with flask python app.py` (or `uv run --with streamlit streamlit run app.py`) — no global install needed. |
 
 ## Solution — Module 07 {#solution--module-07}
-
-## Module 7 — Reference UI Solution (Flask + Jinja)
 
 Single-page Dashboard rendered with Flask + plain CSS. Matches `wireframe.png`.
 

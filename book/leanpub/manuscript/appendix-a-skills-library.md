@@ -36,7 +36,7 @@ A skill is a Markdown file (`SKILL.md`) with YAML frontmatter that Claude Code r
 
 ### How each skill is structured
 
-Every `SKILL.md` follows the same shape, declared by `specs/001-bootcamp-course-materials/contracts/skill.contract.md`:
+Every `SKILL.md` follows the same shape, declared by the skill contract (frontmatter plus six H2 sections: Purpose · When to use · Body · Inputs · Outputs · Worked example):
 
 - **Frontmatter** — `name`, `description` (one-line summary used by the picker)
 - **Purpose** — what the skill does

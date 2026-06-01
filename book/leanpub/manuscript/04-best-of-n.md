@@ -1,7 +1,5 @@
 # 04. Best-of-N
 
-Module 04 · 30 min
-
 ## Build Faster with Best-of-N
 
 **The first answer is rarely the best. Generate three; score; ship the winner.**
@@ -89,8 +87,6 @@ Track A: Python (FastAPI + Pydantic v2). Track B: Node (Hono + Zod + better-sqli
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-04/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-04/README.md).
 > Reference solution: [`exercises/part-04/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-04/solution/README.md).
-
-## Module 4 — Notes API (Best-of-N)
 
 ### Goal
 
@@ -241,8 +237,6 @@ Add a **third** independent candidate (`candidate-c/`) — N = 3 is the real Bes
 
 ## Solution — Module 04 {#solution--module-04}
 
-## Reference solution — Module 4
-
 > **Stop**: only open this after you have produced your own two candidates, filled in `scoring.md`, and chosen a winner.
 
 Two parallel tracks ship under this directory. Pick the one matching your stack and diff your work against it:
@@ -316,4 +310,4 @@ uv run --with fastapi --with uvicorn uvicorn notes_api:app --port 8765
 
 ### Definition of done
 
-See `../README.md`. Note: at least **two distinct candidates** are required — variants of the same approach don't count, and they must come from **two separate chats**, not follow-up turns in one.
+See the exercise above. Note: at least **two distinct candidates** are required — variants of the same approach don't count, and they must come from **two separate chats**, not follow-up turns in one.

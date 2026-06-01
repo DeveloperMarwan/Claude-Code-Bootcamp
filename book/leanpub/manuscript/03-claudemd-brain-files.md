@@ -1,7 +1,5 @@
 # 03. CLAUDE.md Brain Files
 
-Module 03 · 22 min
-
 ## Project Context with CLAUDE.md
 
 **Stop re-explaining your stack. Write it once; Claude reads it every prompt.**
@@ -133,8 +131,6 @@ Write a `CLAUDE.md` for your Module 2 repo (or a personal repo):
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-03/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-03/README.md).
 > Reference solution: [`exercises/part-03/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-03/solution/README.md).
 
-## Module 3 — Project Context with CLAUDE.md
-
 ### Goal
 
 Author a `CLAUDE.md` for a real repo and prove Claude follows it on the next prompt.
@@ -252,8 +248,6 @@ Extend the trim test to *every* section: delete each one in turn, re-prompt, and
 | Proof screenshot is unconvincing | Re-pick a convention that produces a visible diff in output. |
 
 ## Solution — Module 03 {#solution--module-03}
-
-## Reference solution — Module 3
 
 > **Stop**: only open this after you have authored your own `module-03/CLAUDE.md`.
 

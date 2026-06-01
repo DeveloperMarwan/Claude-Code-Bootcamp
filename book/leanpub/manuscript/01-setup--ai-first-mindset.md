@@ -1,7 +1,5 @@
 # 01. Setup & AI-First Mindset
 
-Module 01 · 20 min
-
 ## Setup & AI-First Mindset
 
 **You + Claude Code = a junior engineer you direct, review, and merge.**
@@ -149,8 +147,6 @@ End with one sentence on why skipping Review is the most common failure mode.
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-01/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-01/README.md).
 > Reference solution: [`exercises/part-01/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-01/solution/README.md).
 
-## Module 1 — AI Coding Workspace
-
 ### Goal
 
 Verify your environment and articulate the AI coding loop in your own words.
@@ -244,8 +240,6 @@ Write a second paragraph in `loop-notes.md` describing one situation in your day
 | Claude Code unresponsive | Verify you're authenticated; pair with a neighbor for module 1 only. |
 
 ## Solution — Module 01 {#solution--module-01}
-
-## Reference solution — Module 1
 
 > **Stop**: only open this after you have produced your own `module-01/` deliverable.
 

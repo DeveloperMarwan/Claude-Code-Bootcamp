@@ -217,16 +217,18 @@ def chapter_md(chapter: dict, include_solutions: bool, link_map: dict,
         p.append(f"## Hands-on exercise — Module {chapter['number']} {{#{ex_id}}}")
         p.append("")
         p.extend(eb.companion_callout(manifest, chapter, include_solutions))
-        p.append(eb.transform(eb.read(chapter["exercise"]), chapter["exercise"],
-                              link_map, heading_shift=1, img_handler=img_handler))
+        p.append(eb.strip_leading_heading(eb.transform(
+            eb.read(chapter["exercise"]), chapter["exercise"],
+            link_map, heading_shift=1, img_handler=img_handler)))
         p.append("")
 
     if include_solutions and chapter.get("solution"):
         sol_id = eb.solution_anchor(chapter)
         p.append(f"## Solution — Module {chapter['number']} {{#{sol_id}}}")
         p.append("")
-        p.append(eb.transform(eb.read(chapter["solution"]), chapter["solution"],
-                              link_map, heading_shift=1, img_handler=img_handler))
+        p.append(eb.strip_leading_heading(eb.transform(
+            eb.read(chapter["solution"]), chapter["solution"],
+            link_map, heading_shift=1, img_handler=img_handler)))
         p.append("")
         figures = eb.code_figures(chapter)
         if figures:

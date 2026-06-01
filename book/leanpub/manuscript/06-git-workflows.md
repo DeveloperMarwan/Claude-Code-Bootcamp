@@ -1,7 +1,5 @@
 # 06. Git Workflows
 
-Module 06 · 22 min
-
 ## Git Workflows for Safe AI Dev
 
 **Never let Claude push to main. Branch, commit atomically, PR — you stay the gate.**
@@ -95,8 +93,6 @@ Take your Module 5 work onto a feature branch and ship a clean history:
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-06/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-06/README.md).
 > Reference solution: [`exercises/part-06/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-06/solution/README.md).
 
-## Module 6 — Git Workflows for Safe AI Dev
-
 ### Goal
 
 Take your module-5 work, branch it, split it into atomic commits whose messages Claude wrote, and ship a real PR description.
@@ -185,8 +181,6 @@ Use the `skills/git-workflow/SKILL.md` skill against the same diff and compare i
 
 ## Solution — Module 06 {#solution--module-06}
 
-## Reference solution — Module 6
-
 > **Stop**: only open this after you have split your dirty tree into atomic commits and drafted `pr.md`.
 
 This module produces a **branch history + PR description**, not running code. The reference solution is a worked example of what a strong submission contains.
@@ -243,4 +237,4 @@ jobs:
 
 ### Definition of done
 
-See `../README.md`. Three or more atomic commits + PR with six sections + reviewer checklist.
+See the exercise above. Three or more atomic commits + PR with six sections + reviewer checklist.

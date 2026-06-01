@@ -1,7 +1,5 @@
 # 11. Q&A & Next Steps
 
-Part 11 · 30 min · Closing
-
 ## Q&A & Next Steps
 
 **Ten projects done. Now: the three frameworks you keep and Monday.**

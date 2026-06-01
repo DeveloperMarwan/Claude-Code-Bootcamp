@@ -32,7 +32,7 @@ SPEAKER NOTES — slide 1 (hook, 60 sec)
 
 ## Theory · Four pillars of agentic engineering (4 min)
 
-1. **Skills** — packaged workflows at `skills/<name>/SKILL.md`, invoked with `/<name>`. Your carry-out from today.
+1. **Skills** — packaged workflows at `.claude/skills/<name>/SKILL.md`, invoked with `/<name>`. Your carry-out from today.
 2. **Hooks** — shell commands that fire before/after Claude actions (format, lint, deny dangerous commands).
 3. **MCP** — open connectors to issue trackers, docs, chat, internal tools, read as first-class context.
 4. **Multi-agent** — a lead agent fans work out to workers in separate worktrees.

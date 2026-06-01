@@ -152,6 +152,12 @@ def companion_callout(manifest: dict, chapter: dict,
 _frontmatter_re = re.compile(r"^---\n.*?\n---\n", re.DOTALL)
 _inline_comment_re = re.compile(r"<!--.*?-->", re.DOTALL)
 _span_unwrap_re = re.compile(r"<span\b[^>]*>(.*?)</span>", re.DOTALL | re.IGNORECASE)
+# Module/duration chip on each cover slide (e.g. "Module 09 · 22 min"). The
+# timing is a live-delivery budget that means nothing to a solo reader, so the
+# whole chip is dropped rather than unwrapped.
+_chip_drop_re = re.compile(
+    r'<span\b[^>]*class="[^"]*module-chip[^"]*"[^>]*>.*?</span>',
+    re.DOTALL | re.IGNORECASE)
 _img_tag_re = re.compile(r"<img\b[^>]*>", re.IGNORECASE)
 _stray_tag_re = re.compile(r"</?(?:div|br|hr|p|section)\b[^>]*>", re.IGNORECASE)
 _heading_re = re.compile(r"^(#{1,6})(\s)")
@@ -213,6 +219,31 @@ _presenter_subs = [
      "trace the **5-step loop** for yourself"),
     (re.compile(r"^(\s*\d+\.\s+)Narrate:\s*"), r"\1Note "),
     (re.compile(r"\s+out loud\b"), ""),
+]
+
+# --------------------------------------------------------------------------- #
+# Standalone reframing.
+# The book ships without the companion repository checked out, so references to
+# repo-internal paths (a sibling exercise README, the maintainer-facing skill
+# contract) are reworded into self-contained prose. Source files keep the
+# original repo-relative references (Constitution Principle III).
+# --------------------------------------------------------------------------- #
+_standalone_subs = [
+    # A solution's "See `../README.md`" points at its exercise, which the book
+    # embeds immediately above the solution.
+    (re.compile(r"`\.\./README\.md`"), "the exercise above"),
+    # The maintainer-facing skill contract isn't shipped with the book; state
+    # what it requires instead of linking a path the reader can't open. The
+    # source may write it as a bare code span or a markdown link, so accept
+    # both forms here (this runs before links are de-linked).
+    (re.compile(r"Skim the contract: (?:\[)?`specs/[^`]*skill\.contract\.md`"
+                r"(?:\]\([^)]*\))?\."),
+     "Skim the skill contract: valid frontmatter (`name`, `description`) plus "
+     "six H2 sections — Purpose · When to use · Body · Inputs · Outputs · "
+     "Worked example."),
+    (re.compile(r"`specs/[^`]*skill\.contract\.md`"),
+     "the skill contract (frontmatter plus six H2 sections: Purpose · When to "
+     "use · Body · Inputs · Outputs · Worked example)"),
 ]
 
 
@@ -360,6 +391,7 @@ def transform(text: str, source_rel: str, link_map: dict[str, str],
             continue
 
         # Strip / unwrap presentation-only HTML chrome.
+        line = _chip_drop_re.sub("", line)        # module/duration cover chip
         line = _span_unwrap_re.sub(r"\1", line)
         line = _img_tag_re.sub("", line)          # decorative slide icons
         line = _stray_tag_re.sub("", line)
@@ -381,6 +413,8 @@ def transform(text: str, source_rel: str, link_map: dict[str, str],
             line = _pat.sub(_repl, line)
         for _pat, _repl in _presenter_subs:
             line = _pat.sub(_repl, line)
+        for _pat, _repl in _standalone_subs:
+            line = _pat.sub(_repl, line)
         if _heading_re.match(line):
             line = _presenter_heading_time_re.sub("", line)
         line = line.rstrip()
@@ -401,6 +435,23 @@ def transform(text: str, source_rel: str, link_map: dict[str, str],
 
 def collapse_blank_lines(text: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", text)
+
+
+def strip_leading_heading(text: str) -> str:
+    """Drop a transformed body's leading heading line (and its trailing blank).
+
+    Solution sources open with their own title heading (e.g. ``# Reference
+    solution — Module 1``). When that body is rendered directly under a wrapper
+    heading the builder already emits (``## Solution — Module NN``), the two
+    consecutive headings leave an empty section. Removing the redundant body
+    title closes the gap so content starts immediately under the wrapper.
+    """
+    lines = text.lstrip("\n").splitlines()
+    if lines and re.match(r"^#{1,6}\s", lines[0]):
+        lines = lines[1:]
+        while lines and not lines[0].strip():
+            lines = lines[1:]
+    return "\n".join(lines)
 
 
 # --------------------------------------------------------------------------- #
@@ -538,14 +589,16 @@ def build_chapter(chapter: dict, include_solutions: bool,
         parts.append(f"### Hands-on exercise — Module {chapter['number']}")
         parts.append("")
         parts.extend(companion_callout(manifest, chapter, include_solutions))
-        parts.append(transform(read(chapter["exercise"]), chapter["exercise"], link_map))
+        parts.append(strip_leading_heading(
+            transform(read(chapter["exercise"]), chapter["exercise"], link_map)))
         parts.append("")
 
     # US2: reference solution appendix.
     if include_solutions and chapter.get("solution"):
         parts.append(f"### Solution — Module {chapter['number']}")
         parts.append("")
-        parts.append(transform(read(chapter["solution"]), chapter["solution"], link_map))
+        parts.append(strip_leading_heading(
+            transform(read(chapter["solution"]), chapter["solution"], link_map)))
         parts.append("")
         figures = code_figures(chapter)
         if figures:

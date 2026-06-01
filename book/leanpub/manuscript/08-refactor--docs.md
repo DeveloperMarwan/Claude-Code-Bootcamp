@@ -1,7 +1,5 @@
 # 08. Refactor & Docs
 
-Module 08 · 24 min
-
 ## Refactoring & Documentation at Scale
 
 **Refactor under written constraints. Document from the diff — never from the prompt.**
@@ -90,8 +88,6 @@ public signatures, file count, or behavior. Tests must stay green. Show the diff
 
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-08/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-08/README.md).
 > Reference solution: [`exercises/part-08/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-08/solution/README.md).
-
-## Module 8 — Refactoring & Documentation at Scale
 
 ### Goal
 
@@ -185,8 +181,6 @@ Run the **unconstrained** refactor first. Save its diff. Compare line counts and
 | `ARCHITECTURE.md` is 200 lines | Hard cap at 80; trim limitations + paragraphs. |
 
 ## Solution — Module 08 {#solution--module-08}
-
-## Module 8 — Reference Material
 
 The `before/` folder contains a deliberately messy `pricing.py` and a passing test suite. Students copy it to `module-08/after/` and refactor under hard constraints. The `after/` folder here is a **reference refactor** (a real constrained-refactor run) — same tests, same behaviour, readable code.
 

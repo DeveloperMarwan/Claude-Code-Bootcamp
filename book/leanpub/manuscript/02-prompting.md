@@ -1,7 +1,5 @@
 # 02. Prompting
 
-Module 02 · 24 min
-
 ## Prompting Like a Tech Lead
 
 **A great prompt is a spec. Write it the way a Tech Lead writes a ticket.**
@@ -107,8 +105,6 @@ task delete <id>
 > **Companion repository** — Work this exercise from the live files in the [Claude Code Bootcamp repository](https://github.com/lucab85/Claude-Code-Bootcamp): [`exercises/part-02/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-02/README.md).
 > Reference solution: [`exercises/part-02/solution/README.md`](https://github.com/lucab85/Claude-Code-Bootcamp/blob/main/exercises/part-02/solution/README.md).
 
-## Module 2 — CLI Task Manager
-
 ### Goal
 
 Ship a CLI Task Manager (add, list, done, delete) with JSON persistence, using a Tech-Lead-grade GCOE prompt.
@@ -208,8 +204,6 @@ Add `task list --status open` and `task list --status done` filters. Document th
 
 ## Solution — Module 02 {#solution--module-02}
 
-## Reference solution — Module 2
-
 > **Stop**: only open this after you have produced `module-02/cli.py` (or `cli.js`) and `PROMPT.md`.
 
 Two parallel tracks ship under this directory. Pick the one matching your stack and diff your work against it:
@@ -219,7 +213,7 @@ Two parallel tracks ship under this directory. Pick the one matching your stack 
 | Python (primary) | `python/` | `python3 python/cli.py add "first task"` |
 | Node.js (secondary) | `node/` | `node node/cli.js add "first task"` |
 
-Both implement the same CLI Task Manager spec from `../README.md`. They are not byte-identical: differences highlight where Best-of-N (Module 4) would choose between them.
+Both implement the same CLI Task Manager spec from the exercise above. They are not byte-identical: differences highlight where Best-of-N (Module 4) would choose between them.
 
 ### What to compare
 
@@ -230,4 +224,4 @@ Both implement the same CLI Task Manager spec from `../README.md`. They are not 
 
 ### Definition of done
 
-See `../README.md` — the rubric is unchanged.
+See the exercise above — the rubric is unchanged.
