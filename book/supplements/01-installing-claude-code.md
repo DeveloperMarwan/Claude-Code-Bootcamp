@@ -1,10 +1,10 @@
-## Before you start — installing Claude Code
+# Before you start — installing Claude Code
 
 This book is hands-on: every chapter asks you to run **Claude Code** in your own
 terminal. If you have not installed it yet, this takes about five minutes. (In
 the live workshop this is pre-work; reading on your own, do it now.)
 
-### Install
+## Install
 
 The native installer is the recommended path on every platform:
 
@@ -27,7 +27,7 @@ npm install -g @anthropic-ai/claude-code
 Native installs update themselves in the background, so you stay current without
 any extra steps.
 
-### Verify
+## Verify
 
 Confirm the binary is on your `PATH`:
 
@@ -36,7 +36,7 @@ claude --version
 claude doctor   # deeper check of your install and configuration
 ```
 
-### Sign in
+## Sign in
 
 Claude Code needs a **Pro, Max, Team, Enterprise, or Console** account — the free
 Claude.ai plan does not include access. Start it in any project folder and follow
