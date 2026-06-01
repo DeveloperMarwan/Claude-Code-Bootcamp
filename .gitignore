@@ -44,3 +44,4 @@ venv/
 .env.*
 !.env.example
 assessments/answer-key.md
+assessments/answer.md
