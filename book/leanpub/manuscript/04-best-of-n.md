@@ -1,10 +1,8 @@
 # 04. Best-of-N
 
-## Build Faster with Best-of-N
-
 **The first answer is rarely the best. Generate three; score; ship the winner.**
 
-### Theory · Best-of-N
+## Theory · Best-of-N
 
 > **Generate N independent candidates → score on a rubric → pick the winner.** N = 3 is the sweet spot.
 
@@ -16,13 +14,13 @@
 
 **Without the rubric you pick by gut and the lift disappears. Correctness gates everything.**
 
-### Best-of-N, scored
+## Best-of-N, scored
 
 ![Best-of-N: generate N candidates, score on Correctness, Simplicity, Fit, pick the winner](04-bon-scoring.png)
 
 Generate **N** independent candidates → score on **Correctness · Simplicity · Fit** → keep the winner.
 
-### Reference · The 3-criterion scorecard
+## Reference · The 3-criterion scorecard
 
 | Criterion | Question | Weight |
 |---|---|---|
@@ -32,13 +30,13 @@ Generate **N** independent candidates → score on **Correctness · Simplicity �
 
 Record a one-paragraph justification per candidate in `scoring.md`. **Never delete losers before scoring.**
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - One candidate + "improve it" ×3 (iteration, not BoN).
 - Skipping the rubric → picking by vibe → no lift.
 - Choosing the "elegant" one that fails the test plan (correctness is the gate).
 
-### Worked example · Three candidates, one winner
+## Worked example · Three candidates, one winner
 
 **The reusable prompt — paste it verbatim for A, B, and C:**
 
@@ -55,7 +53,7 @@ EXAMPLES: POST /notes {"text":"hi"} -> 201 + id;
 
 > Variance must come from the model, **not** the prompt. Never say "now do it differently."
 
-### Try it yourself · Notes API, Best-of-3
+## Try it yourself · Notes API, Best-of-3
 
 **Exercise**: [`exercises/part-04/README.md`](#hands-on-exercise--module-04)
 
@@ -72,7 +70,7 @@ Track A: Python (FastAPI + Pydantic v2). Track B: Node (Hono + Zod + better-sqli
 
 **Success signal**: all five endpoints respond with correct status codes via curl.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 
@@ -164,6 +162,8 @@ Notes:
 > `scoring.md` is a file **you create** — it is not shipped in the repo. For a complete filled-in model, see `solution/scoring.example.md`.
 
 ### Manual validation steps
+
+Run the same checks against every candidate so the comparison is fair, then score them side-by-side.
 
 #### Step 4a — Smoke-test each candidate
 

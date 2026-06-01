@@ -1,10 +1,8 @@
 # 08. Refactor & Docs
 
-## Refactoring & Documentation at Scale
-
 **Refactor under written constraints. Document from the diff — never from the prompt.**
 
-### Theory · Constrained refactor + two-pass docs
+## Theory · Constrained refactor + two-pass docs
 
 > **Tell Claude what may NOT change**: public API, file count, runtime behavior.
 
@@ -16,13 +14,13 @@
 
 **Combine the two passes and the docs describe your prompt, not the code.**
 
-### Refactor inside the guardrails
+## Refactor inside the guardrails
 
 ![Constrained refactor: constraints.md fixes what must not change, then two-pass docs](08-refactor-constraints.png)
 
 **constraints.md** fixes what must NOT change — write it *before* you touch the code.
 
-### Reference · constraints.md (write it first)
+## Reference · constraints.md (write it first)
 
 ```text
 # Refactor constraints
@@ -40,14 +38,14 @@
 - No comments unless they explain *why*.
 ```
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - Skipping `constraints.md` → Claude rewrites everything → lab spent reading.
 - Combining refactor + docs in one prompt → docs describe the prompt.
 - Vetoing every unrequested change (some are fine — read the diff).
 - 200-line `ARCHITECTURE.md` (trim aggressively).
 
-### Worked example · Bad vs. constrained refactor
+## Worked example · Bad vs. constrained refactor
 
 1. Open `exercises/part-08/before/` (messy). Show the **unconstrained** refactor → bloated diff.
 2. Reset. Paste the **constrained** prompt:
@@ -62,7 +60,7 @@ public signatures, file count, or behavior. Tests must stay green. Show the diff
 
 **Success signal**: the constrained diff respects every line of `constraints.md` and tests stay green.
 
-### Try it yourself · Refactor + handoff docs
+## Try it yourself · Refactor + handoff docs
 
 **Exercise**: [`exercises/part-08/README.md`](#hands-on-exercise--module-08)
 
@@ -73,7 +71,7 @@ public signatures, file count, or behavior. Tests must stay green. Show the diff
 
 **Success signal**: tests green · diff respects every constraint · both docs within length limits.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

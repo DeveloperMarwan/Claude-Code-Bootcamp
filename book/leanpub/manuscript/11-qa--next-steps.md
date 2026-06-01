@@ -1,10 +1,8 @@
 # 11. Q&A & Next Steps
 
-## Q&A & Next Steps
-
 **Ten projects done. Now: the three frameworks you keep and Monday.**
 
-### Theory · Three frameworks you keep
+## Theory · Three frameworks you keep
 
 Forget the syntax; keep these three:
 
@@ -14,7 +12,7 @@ Forget the syntax; keep these three:
 
 > If you remember nothing else, remember the loop. It is the whole course in five words.
 
-### Reference · The five most common mistakes
+## Reference · The five most common mistakes
 
 1. **No plan** — jumping straight to "write the function".
 2. **Skipping review** — accepting the first diff.
@@ -24,7 +22,7 @@ Forget the syntax; keep these three:
 
 Every one is a habit, not a knowledge gap. Fix the habit.
 
-### Reference · Three prompting anti-patterns
+## Reference · Three prompting anti-patterns
 
 | Anti-pattern | Symptom | Fix |
 |---|---|---|
@@ -32,7 +30,7 @@ Every one is a habit, not a knowledge gap. Fix the habit.
 | **Over-eager agent** | Long run → wrong abstraction → 600-line diff | Stop at the plan, review, *then* implement |
 | **Merge-without-review** | Claude commits + pushes in one shot | Review-before-commit, even when "obviously fine" |
 
-### Worked example · "Fix it" loop vs. precise prompt
+## Worked example · "Fix it" loop vs. precise prompt
 
 1. Reproduce the **"fix it" loop** — vague prompt → unfocused diff → drift:
 
@@ -51,7 +49,7 @@ Fix only this; keep all other behavior. Show the diff.
 
 **Success signal**: the precise prompt fixes it in one pass; the vague loop doesn't.
 
-### Future-proof · Keep an eye on (May 2026 → beyond)
+## Future-proof · Keep an eye on (May 2026 → beyond)
 
 The tools change monthly; the **habits** don't. What to watch — and the trick that compounds:
 
@@ -65,7 +63,7 @@ The tools change monthly; the **habits** don't. What to watch — and the trick 
 
 > The rule that survives every release: **Plan → Implement → Test → Review → Commit.**
 
-### Try it yourself · The Monday sentence
+## Try it yourself · The Monday sentence
 
 No code this time — one sentence. Complete it and write it where you'll see it:
 
@@ -77,7 +75,7 @@ Then:
 
 **Success signal**: you can say your Monday sentence without hesitating.
 
-### Done · The whole bootcamp
+## Done · The whole bootcamp
 
 **Definition of done — the whole bootcamp**
 

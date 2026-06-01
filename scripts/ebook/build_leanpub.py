@@ -213,8 +213,8 @@ def back_matter_md(manifest: dict, link_map: dict, img_handler) -> str:
     back = manifest.get("back_matter", {})
     p: list[str] = ["{backmatter}", "", "# Appendix A — Skills Library", ""]
     if back.get("skills"):
-        p.append(eb.transform(eb.read(back["skills"]), back["skills"],
-                              link_map, heading_shift=1, img_handler=img_handler))
+        p.append(eb.render_under_wrapper(back["skills"], link_map,
+                                         heading_shift=1, img_handler=img_handler))
         p.append("")
     p.append(
         "Your proof of work is the portfolio you build across the chapters: one "
@@ -230,8 +230,8 @@ def assessments_md(manifest: dict, link_map: dict, img_handler) -> str:
     """Appendix B — the self-grading Knowledge Quiz (answers stay in the repo)."""
     back = manifest.get("back_matter", {})
     p: list[str] = ["# Appendix B — Knowledge Quiz", ""]
-    p.append(eb.transform(eb.read(back["assessments"]), back["assessments"],
-                          link_map, heading_shift=1, img_handler=img_handler))
+    p.append(eb.render_under_wrapper(back["assessments"], link_map,
+                                     heading_shift=1, img_handler=img_handler))
     p.append("")
     return eb.collapse_blank_lines("\n".join(p)).strip() + "\n"
 

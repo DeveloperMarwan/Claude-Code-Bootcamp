@@ -1,10 +1,8 @@
 # 03. CLAUDE.md Brain Files
 
-## Project Context with CLAUDE.md
-
 **Stop re-explaining your stack. Write it once; Claude reads it every prompt.**
 
-### Theory · CLAUDE.md is a behavior file
+## Theory · CLAUDE.md is a behavior file
 
 `CLAUDE.md` lives at the repo root. Claude reads it **automatically on every prompt**.
 
@@ -20,13 +18,13 @@ Five sections earn their place:
 
 **Trim test**: delete a section; if Claude behaves the same, it was bloat. Aim **under 80 lines**.
 
-### CLAUDE.md at a glance
+## CLAUDE.md at a glance
 
 ![CLAUDE.md cheat sheet: Stack, Conventions, Commands, Do-not, Glossary](03-claude-md-cheatsheet.png)
 
 Five sections — **Stack · Conventions · Commands · Do-not · Glossary** — under 80 lines.
 
-### Reference · A lean CLAUDE.md (≤ 80 lines)
+## Reference · A lean CLAUDE.md (≤ 80 lines)
 
 ```text
 # CLAUDE.md
@@ -50,7 +48,7 @@ Five sections — **Stack · Conventions · Commands · Do-not · Glossary** —
 
 Template: `skills/claude-md-template/SKILL.md`.
 
-### Reference · A complete CLAUDE.md (all 5 sections)
+## Reference · A complete CLAUDE.md (all 5 sections)
 
 ```text
 # CLAUDE.md — Notes API
@@ -81,13 +79,13 @@ Template: `skills/claude-md-template/SKILL.md`.
 
 Every line changes Claude's output. Still under 80 lines.
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - Writing an `ABOUT.md` (documentation) instead of a behavior file.
 - 200 lines of bloat instead of a lean 80.
 - Skipping **Do-not** — and not committing the file (if it's not in git, it isn't real).
 
-### Worked example · Before vs. after CLAUDE.md
+## Worked example · Before vs. after CLAUDE.md
 
 **The prompt — run it twice, unchanged (before, then after):**
 
@@ -102,7 +100,7 @@ to a file. Match the project's existing conventions.
 
 **Success signal**: with `CLAUDE.md` present, Claude matches your naming/layout without being told.
 
-### Try it yourself · Author your CLAUDE.md
+## Try it yourself · Author your CLAUDE.md
 
 **Exercise**: [`exercises/part-03/README.md`](#hands-on-exercise--module-03)
 
@@ -115,7 +113,7 @@ Write a `CLAUDE.md` for your Module 2 repo (or a personal repo):
 
 **Success signal**: on the next prompt, Claude obeys one convention you wrote — capture a proof screenshot.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

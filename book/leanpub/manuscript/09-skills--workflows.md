@@ -1,10 +1,8 @@
 # 09. Skills & Workflows
 
-## Skills, Hooks, MCP & Multi-Agent
-
 **Stop re-typing workflows. Package them. This is agentic engineering.**
 
-### Theory · Four pillars of agentic engineering
+## Theory · Four pillars of agentic engineering
 
 1. **Skills** — packaged workflows at `.claude/skills/<name>/SKILL.md`, invoked with `/<name>`. Your carry-out from today.
 2. **Hooks** — shell commands that fire before/after Claude actions (format, lint, deny dangerous commands).
@@ -13,13 +11,13 @@
 
 > Skills are the unit you'll reuse most. The rest make Claude a teammate, not a chatbot.
 
-### The four power-ups
+## The four power-ups
 
 ![Agentic engineering pillars: Skills, Hooks, MCP, Multi-agent](09-skills-catalogue.png)
 
 **Skills · Hooks · MCP · Multi-agent** — Skills are the one you'll reuse most.
 
-### Reference · Hooks & MCP
+## Reference · Hooks & MCP
 
 **Hooks** — `.claude/hooks.json`:
 
@@ -32,7 +30,7 @@
 - Jira / Linear / GitHub · Drive / Notion · Slack.
 - **Least privilege**: read scope unless you truly need write.
 
-### Reference · Multi-agent & common mistakes
+## Reference · Multi-agent & common mistakes
 
 **Multi-agent fan-out** — lead splits a feature across workers (backend / frontend / tests) in separate worktrees. **Don't** use it for tasks < 30 min, shared mutable state, or non-independent sub-tasks.
 
@@ -43,7 +41,7 @@
 - Skipping the **Worked example** (reviewers can't tell if it works).
 - Fanning out 4 agents on a 10-minute task.
 
-### Worked example · Author a Skill in 4 minutes
+## Worked example · Author a Skill in 4 minutes
 
 1. Open `skills/code-review/SKILL.md`; read its H2 headers aloud.
 2. Paste the drafting prompt:
@@ -58,7 +56,7 @@ code-review/SKILL.md. Purpose: score 3 diffs on Correctness, Simplicity, Fit.
 
 **Success signal**: the new skill runs and its output matches its own spec — no extra prompting.
 
-### Worked example · Connect GitHub over MCP
+## Worked example · Connect GitHub over MCP
 
 **"Connect, don't paste."** Let Claude read GitHub directly instead of copying issue text into chat.
 
@@ -78,7 +76,7 @@ Show me all open PRs assigned to me, then summarize what PR #456 changes.
 
 **Success signal**: real PR data Claude could only get by reading the connector — zero copy-paste.
 
-### Try it yourself · Author a reusable Skill
+## Try it yourself · Author a reusable Skill
 
 **Exercise**: [`exercises/part-09/README.md`](#hands-on-exercise--module-09)
 
@@ -93,7 +91,7 @@ Write one **project-agnostic** skill for a workflow you'll repeat (e.g. `commit-
 
 **Success signal**: one real invocation whose output matches the skill's **Outputs** section.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

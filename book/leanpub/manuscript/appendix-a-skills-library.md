@@ -2,18 +2,16 @@
 
 # Appendix A — Skills Library
 
-## Claude Skills Library
-
 > Reusable Claude Code skills authored for the **Claude Code Bootcamp** by Luca Berton.
 > Drop this `skills/` directory into any Claude Code-enabled project and the skills become auto-discoverable.
 
 **Licensed MIT — safe for commercial reuse.** See `LICENSE`.
 
-### What is a Skill?
+## What is a Skill?
 
 A skill is a Markdown file (`SKILL.md`) with YAML frontmatter that Claude Code reads and offers in its skill picker. Each skill packages a reusable prompt, checklist, or workflow.
 
-### The 10 skills
+## The 10 skills
 
 | Skill | Purpose |
 |---|---|
@@ -28,13 +26,13 @@ A skill is a Markdown file (`SKILL.md`) with YAML frontmatter that Claude Code r
 | `documentation-generation` | Generate `README.md`, `ARCHITECTURE.md`, `HANDOFF.md` for a module. |
 | `production-readiness-review` | Produce a 5-axis production readiness report. |
 
-### How to install
+## How to install
 
 1. Copy this `skills/` directory into the root of your target repo (or a parent repo that Claude Code scans).
 2. Open Claude Code in that repo. The skills appear in the skill picker by `name` (declared in each `SKILL.md`'s frontmatter).
 3. Invoke a skill by its name; supply the inputs documented in its **Inputs** section.
 
-### How each skill is structured
+## How each skill is structured
 
 Every `SKILL.md` follows the same shape, declared by the skill contract (frontmatter plus six H2 sections: Purpose · When to use · Body · Inputs · Outputs · Worked example):
 
@@ -46,11 +44,11 @@ Every `SKILL.md` follows the same shape, declared by the skill contract (frontma
 - **Outputs** — what Claude returns
 - **Worked example** — input + expected output sketch
 
-### Project-agnostic guarantee
+## Project-agnostic guarantee
 
 Every skill in this directory is **path-agnostic**. No skill references the bootcamp repo's layout, project names, or sample data. You can drop the directory into any codebase unchanged.
 
-### Contributing
+## Contributing
 
 This directory is part of the Claude Code Bootcamp materials. Improvements via PR welcome. The skills license (MIT) is decoupled from the course materials license (CC BY-NC-SA 4.0) on purpose — you may re-package the skills inside commercial products without re-licensing the bootcamp content.
 

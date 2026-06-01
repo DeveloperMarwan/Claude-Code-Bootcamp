@@ -1,13 +1,11 @@
 # Appendix B — Knowledge Quiz
 
-## Knowledge Quiz
-
 > 20 multiple-choice items. One topic per module — 2 items per module across the 10 modules.
 > Choose the **single best** answer unless the question states otherwise.
 > Answer every question, then self-check against `answer.md`. Score 2 points per
 > correct answer (40 max), then convert: `(raw / 40) × 100`. Worth 40% of the final score.
 
-### Module 1 — AI-First Mindset
+## Module 1 — AI-First Mindset
 
 **Q1.** The five steps of the AI coding loop, in order, are:
 
@@ -23,7 +21,7 @@
 - C) Choosing the wrong language
 - D) Insufficient compute budget
 
-### Module 2 — Prompting Like a Tech Lead
+## Module 2 — Prompting Like a Tech Lead
 
 **Q3.** GCOE stands for:
 
@@ -39,7 +37,7 @@
 - C) Constraints — language, deps, exit codes
 - D) Variable names
 
-### Module 3 — CLAUDE.md
+## Module 3 — CLAUDE.md
 
 **Q5.** A `CLAUDE.md` file should be:
 
@@ -55,7 +53,7 @@
 - C) Stack · Tests · CI · Authors · Changelog
 - D) Conventions · API · Examples · FAQ · Notes
 
-### Module 4 — Best-of-N
+## Module 4 — Best-of-N
 
 **Q7.** In Best-of-N, "independent candidates" means:
 
@@ -71,7 +69,7 @@
 - C) Tests · Docs · Coverage
 - D) Performance · Security · Deploy
 
-### Module 5 — Testing, Debugging, Self-Review
+## Module 5 — Testing, Debugging, Self-Review
 
 **Q9.** Self-review prompts work better when framed as:
 
@@ -87,7 +85,7 @@
 - C) `skills/code-review/SKILL.md`
 - D) `module-05/rubric.md`
 
-### Module 6 — Git Workflows
+## Module 6 — Git Workflows
 
 **Q11.** A Conventional Commit subject line follows the shape:
 
@@ -103,7 +101,7 @@
 - C) Just the file names changed
 - D) The commit messages only
 
-### Module 7 — Multimodal
+## Module 7 — Multimodal
 
 **Q13.** When the model produces a UI that is "close but not right" to the wireframe, the next move is:
 
@@ -119,7 +117,7 @@
 - C) Comply with browser support
 - D) Make the demo faster
 
-### Module 8 — Refactoring
+## Module 8 — Refactoring
 
 **Q15.** Authoring `constraints.md` **before** prompting Claude for a refactor is important because:
 
@@ -135,7 +133,7 @@
 - C) Claude refuses
 - D) It changes commit count
 
-### Module 9 — Skills
+## Module 9 — Skills
 
 **Q17.** A `SKILL.md` file's frontmatter must include at minimum:
 
@@ -151,7 +149,7 @@
 - C) It uses only English
 - D) It has fewer than 50 lines
 
-### Module 10 — Production Readiness
+## Module 10 — Production Readiness
 
 **Q19.** The five production-readiness axes used in Module 10 are:
 

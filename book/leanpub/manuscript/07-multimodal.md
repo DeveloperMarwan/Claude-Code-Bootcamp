@@ -1,10 +1,8 @@
 # 07. Multimodal
 
-## Multimodal: Screenshot to UI
-
 **Claude can read a picture. Hand it a wireframe; get a working UI back.**
 
-### Theory · Layout-first prompting
+## Theory · Layout-first prompting
 
 > Let Claude **read the layout** from the image; you describe what it **can't** see.
 
@@ -15,13 +13,13 @@
 
 Two wireframes ship with the exercise: `wireframe.png` (canonical) and `wireframe-sketch.png` (rough).
 
-### From wireframe to running UI
+## From wireframe to running UI
 
 ![Screenshot-to-UI: layout-first prompt, build, screenshot-diff loop](07-screenshot-to-ui.png)
 
 Layout-first prompt → build → **screenshot-diff loop** (cap at 3 rounds).
 
-### Reference · markitdown — any file → Markdown
+## Reference · markitdown — any file → Markdown
 
 For **non-image** sources (PDF, DOCX, PPTX, XLSX, audio, video, HTML, ZIP, YouTube), convert to Markdown first — it's cheap and LLM-native:
 
@@ -32,14 +30,14 @@ markitdown report.pdf > report.md
 
 Then drop into the prompt: *"Attached is the converted Markdown of `report.pdf`."* Claude consumes tables and headings without burning vision tokens.
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - "Looks close enough" — the whole point is precision; diff again.
 - Pulling in Tailwind / shadcn (the constraint exists for a reason).
 - Forgetting to attach the image.
 - Iterating five rounds (cap at three).
 
-### Worked example · Wireframe → running UI
+## Worked example · Wireframe → running UI
 
 1. Open `exercises/part-07/wireframe-sketch.png` in Claude Code.
 2. Paste the prompt **with the framework constraint**:
@@ -54,7 +52,7 @@ template. Match the layout — header, sidebar, main, footer. Run on localhost:5
 
 **Success signal**: the app runs with one command and the layout clearly matches the wireframe.
 
-### Try it yourself · Dashboard from wireframe
+## Try it yourself · Dashboard from wireframe
 
 **Exercise**: [`exercises/part-07/README.md`](#hands-on-exercise--module-07)
 
@@ -71,7 +69,7 @@ Run the **visual-diff loop** at least once; record patches in `diff-notes.md`.
 
 **Success signal**: render at 1280×720 unmistakably matches the wireframe.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

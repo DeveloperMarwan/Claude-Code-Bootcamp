@@ -1,10 +1,8 @@
 # 02. Prompting
 
-## Prompting Like a Tech Lead
-
 **A great prompt is a spec. Write it the way a Tech Lead writes a ticket.**
 
-### Theory · The GCOE prompt
+## Theory · The GCOE prompt
 
 A production prompt has **four parts — skip one and quality drops**:
 
@@ -17,13 +15,13 @@ A production prompt has **four parts — skip one and quality drops**:
 
 **A vague prompt produces plausible code that fails review. GCOE produces code you can merge.**
 
-### Anatomy of a GCOE prompt
+## Anatomy of a GCOE prompt
 
 ![GCOE prompt anatomy: Goal, Constraints, Output, Examples](02-prompt-anatomy.png)
 
 **G**oal · **C**onstraints · **O**utput · **E**xamples — skip one and quality drops.
 
-### Reference · GCOE skeleton you can paste
+## Reference · GCOE skeleton you can paste
 
 ```text
 GOAL: A user can <verb> <thing> from the command line.
@@ -43,13 +41,13 @@ EXAMPLES:
 
 Keep it tight. Every line removes one wrong guess Claude could make.
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - "Build a CLI" with no constraints — looks fine, fails review.
 - Allowing unintended third-party deps (the constraint exists for a reason).
 - Skipping examples and exit codes — production CLIs are graded on exit codes, not stdout.
 
-### Worked example · Vague vs. GCOE
+## Worked example · Vague vs. GCOE
 
 **Step 1 — paste the vague prompt:**
 
@@ -70,7 +68,7 @@ EXAMPLES: `task add "Buy milk"` -> prints id, exit 0;
 
 **Success signal**: the GCOE version runs all four commands with correct exit codes; the vague one doesn't.
 
-### Try it yourself · CLI Task Manager
+## Try it yourself · CLI Task Manager
 
 **Exercise**: [`exercises/part-02/README.md`](#hands-on-exercise--module-02)
 
@@ -89,7 +87,7 @@ task delete <id>
 
 **Success signal**: all four commands run end-to-end; exit codes are `0` / `1` / `2`.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

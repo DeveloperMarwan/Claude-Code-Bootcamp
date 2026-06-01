@@ -1,10 +1,8 @@
 # 05. Testing & Debugging
 
-## Testing, Debugging & Self-Review
-
 **Untested AI code is a guess. Make Claude review its own work as a stranger's PR.**
 
-### Theory · Test, then self-review
+## Theory · Test, then self-review
 
 **Test pyramid for AI code**: many cheap unit tests · a few integration tests on the happy path · always cover **error paths**.
 
@@ -14,13 +12,13 @@
 - Bundled skills cut prompt repetition: `/debug` · `/verify` · `/code-review` · `/loop` · `/batch`.
 - You ship a **personal** `code-review-rubric.md` — your blind spots, not the instructor's.
 
-### The test-and-review loop
+## The test-and-review loop
 
 ![Test and debug loop: write tests, find the bug, self-review, fix, re-run](05-test-debug-loop.png)
 
 Tests → find the bug → **self-review as a stranger** → fix → re-run until green.
 
-### Reference · The self-review prompt
+## Reference · The self-review prompt
 
 ```text
 Review this code as if it were a stranger's pull request.
@@ -30,14 +28,14 @@ Be specific: file, line, symptom, and the fix. Do not be polite.
 
 Test in-process with a temp SQLite DB per test — **no network, no HTTP mocks, never mock the system under test.**
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - Tests that mock the system under test (useless).
 - Self-review without the "stranger's PR" framing (sycophantic output).
 - Copying the skill rubric verbatim — your rubric must reflect *your* blind spots.
 - Confusing the student rubric with the instructor grading rubric (different files).
 
-### Worked example · Plant a bug, catch it
+## Worked example · Plant a bug, catch it
 
 1. Open the Module 4 winner; ask for a test suite (pytest + httpx, or vitest + fetch). Run → green.
 2. Plant one off-by-one bug live (e.g. a pagination boundary).
@@ -52,7 +50,7 @@ List concrete bugs with file, line, and a minimal fix. Don't say "looks good".
 
 **Success signal**: the self-review names the bug's file, line, and fix — not "looks good".
 
-### Try it yourself · Suite + 2 bugs + your rubric
+## Try it yourself · Suite + 2 bugs + your rubric
 
 **Exercise**: [`exercises/part-05/README.md`](#hands-on-exercise--module-05)
 
@@ -64,7 +62,7 @@ List concrete bugs with file, line, and a minimal fix. Don't say "looks good".
 
 **Success signal**: tests pass on fixed code; rubric has ≥ 1 check not in `skills/code-review/SKILL.md`.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

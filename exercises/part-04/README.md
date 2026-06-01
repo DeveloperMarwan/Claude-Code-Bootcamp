@@ -77,6 +77,8 @@ Notes:
 
 ## Manual validation steps
 
+Run the same checks against every candidate so the comparison is fair, then score them side-by-side.
+
 ### Step 4a — Smoke-test each candidate
 
 For **each** candidate (`candidate-a`, then `candidate-b`), start its server and run the same script. Adjust the port to whatever that candidate chose.

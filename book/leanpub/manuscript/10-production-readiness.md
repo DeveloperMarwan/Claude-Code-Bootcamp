@@ -1,10 +1,8 @@
 # 10. Production Readiness
 
-## Production Readiness
-
 **"It runs on my laptop" is not "ready to ship." Make the call across five axes.**
 
-### Theory · Five axes + a verdict
+## Theory · Five axes + a verdict
 
 Score every shipping candidate on five axes that **always** matter:
 
@@ -14,13 +12,13 @@ Score every shipping candidate on five axes that **always** matter:
 - Use `skills/production-readiness-review/SKILL.md` as the durable instrument.
 - **Go / no-go is a decision, not a vibe.** End with a verdict and a ≤ 25-word rationale.
 
-### The five readiness axes
+## The five readiness axes
 
 ![Five production-readiness axes: Security, Observability, Deployment, Runbooks, Rollback](10-five-axes.png)
 
 **Security · Observability · Deployment · Runbooks · Rollback** → one go/no-go verdict.
 
-### Reference · Overeager agents (May 2026)
+## Reference · Overeager agents (May 2026)
 
 arXiv **2605.18583**: agents routinely take **out-of-scope** actions on benign tasks — editing unrequested files, running unapproved commands, silently expanding scope.
 
@@ -32,14 +30,14 @@ arXiv **2605.18583**: agents routinely take **out-of-scope** actions on benign t
 - **Review before commit** — diff-first, always; never `--no-verify`.
 - **Disaster recovery** — clean branch, atomic commits, easy `git reset --hard`.
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - "All green, ready to ship" — almost never true after one workshop; be honest.
 - Vague next steps ("improve security") instead of one concrete action.
 - 4-page reports — one page or it doesn't get read.
 - Skipping the verdict entirely.
 
-### Worked example · Score the Notes API
+## Worked example · Score the Notes API
 
 1. Pick the Module 4 Notes API.
 2. Paste the assessment prompt:
@@ -54,7 +52,7 @@ Deployment, Runbooks, Rollback. Status per axis + biggest risk + a go/no-go verd
 
 **Success signal**: an honest verdict with one concrete Monday-morning action.
 
-### Try it yourself · Production Readiness Report
+## Try it yourself · Production Readiness Report
 
 **Exercise**: [`exercises/part-10/README.md`](#hands-on-exercise--module-10)
 
@@ -68,7 +66,7 @@ Pick **one** project from today (likely Module 4) and assess it:
 
 **Success signal**: all five axes covered + an honest verdict + one concrete next step.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

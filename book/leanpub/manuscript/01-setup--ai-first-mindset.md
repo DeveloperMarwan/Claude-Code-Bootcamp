@@ -1,12 +1,10 @@
 # 01. Setup & AI-First Mindset
 
-## Before you start — installing Claude Code
-
 This book is hands-on: every chapter asks you to run **Claude Code** in your own
 terminal. If you have not installed it yet, this takes about five minutes. (In
 the live workshop this is pre-work; reading on your own, do it now.)
 
-### Install
+## Install
 
 The native installer is the recommended path on every platform:
 
@@ -29,7 +27,7 @@ npm install -g @anthropic-ai/claude-code
 Native installs update themselves in the background, so you stay current without
 any extra steps.
 
-### Verify
+## Verify
 
 Confirm the binary is on your `PATH`:
 
@@ -38,7 +36,7 @@ claude --version
 claude doctor   # deeper check of your install and configuration
 ```
 
-### Sign in
+## Sign in
 
 Claude Code needs a **Pro, Max, Team, Enterprise, or Console** account — the free
 Claude.ai plan does not include access. Start it in any project folder and follow
@@ -51,13 +49,11 @@ claude
 Once `claude --version` prints a version and you have signed in, you are ready
 for Module 1. Everything else in this book builds on that one command.
 
-## Setup & AI-First Mindset
-
 **You + Claude Code = a junior engineer you direct, review, and merge.**
 
 Instructor: **Luca Berton**
 
-### Welcome · What you'll build today
+## Welcome · What you'll build today
 
 **10 small, real projects in 4 hours** — one per module, all with Claude Code.
 
@@ -67,7 +63,7 @@ Instructor: **Luca Berton**
 
 You direct. Claude implements. You review and merge. **You are always the engineer of record.**
 
-### Your instructor — Luca Berton
+## Your instructor — Luca Berton
 
 - **Automation engineer & educator.** 15+ years shipping infrastructure-as-code, Ansible, and developer tooling for global enterprises.
 - **Author & speaker.** Books on Ansible and DevOps; regular conference speaker; runs a YouTube channel on automation.
@@ -76,7 +72,7 @@ You direct. Claude implements. You review and merge. **You are always the engine
 
 🔗 [lucaberton.com](https://lucaberton.com/)
 
-### Anthropic & the Claude models (May 2026)
+## Anthropic & the Claude models (May 2026)
 
 **Anthropic** builds Claude — frontier models with a safety-first focus. **Claude Code** is their agentic coding tool.
 
@@ -88,7 +84,7 @@ You direct. Claude implements. You review and merge. **You are always the engine
 
 **Rule of thumb**: start on **Sonnet**. Escalate to **Opus** when stuck on design. Drop to **Haiku** for bulk/trivial work. Switch live with `/model`.
 
-### Theory · The AI coding loop
+## Theory · The AI coding loop
 
 **You stay the engineer of record. Claude proposes; you decide.**
 
@@ -104,13 +100,13 @@ Every module today repeats the same 5 steps:
 
 **Skipping `Review` is the #1 way AI-generated bugs reach production.**
 
-### The loop you'll repeat all day
+## The loop you'll repeat all day
 
 ![The five-step Claude Code loop: Plan, Implement, Test, Review, Commit](01-tcc-loop.png)
 
 **Plan → Implement → Test → Review → Commit.** Skipping **Review** is how AI bugs ship.
 
-### Reference · Claude Code is everywhere (May 2026)
+## Reference · Claude Code is everywhere (May 2026)
 
 Claude Code ships on **four surfaces** with one shared context:
 
@@ -121,7 +117,7 @@ Claude Code ships on **four surfaces** with one shared context:
 
 Today we work in **terminal + IDE**. Patterns transfer to the other surfaces unchanged.
 
-### Reference · Slash commands cheat sheet
+## Reference · Slash commands cheat sheet
 
 | Command | What it does |
 |---|---|
@@ -140,13 +136,13 @@ Today we work in **terminal + IDE**. Patterns transfer to the other surfaces unc
 
 Forgot one? `/help` is one keystroke away.
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - Copying Claude's reply verbatim — the rubric penalises this.
 - Treating Review as optional.
 - Using PowerShell on Windows — move to WSL2 (see `student-guide.md`).
 
-### Worked example · "Read this repo"
+## Worked example · "Read this repo"
 
 Read through this worked example before trying it yourself.
 
@@ -162,7 +158,7 @@ List the top-level files and tell me what kind of repository this is.
 
 **Success signal**: Claude names `slides/`, `exercises/`, and `skills/` without you opening them.
 
-### Try it yourself · Verify + name the loop
+## Try it yourself · Verify + name the loop
 
 **Exercise**: [`exercises/part-01/README.md`](#hands-on-exercise--module-01)
 
@@ -183,7 +179,7 @@ End with one sentence on why skipping Review is the most common failure mode.
 
 **Success signal**: `module-01/` contains both files; the notes name all 5 steps in order.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

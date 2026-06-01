@@ -1,10 +1,8 @@
 # 06. Git Workflows
 
-## Git Workflows for Safe AI Dev
-
 **Never let Claude push to main. Branch, commit atomically, PR — you stay the gate.**
 
-### Theory · Safe git for AI code
+## Theory · Safe git for AI code
 
 - **Branch first**, always: `<type>/<scope>-<summary>` → `feat/notes-api-search`.
 - **Atomic commits** — one logical change each. Claude can split a dirty tree if you ask.
@@ -15,13 +13,13 @@
 
 Full reference: `skills/git-workflow/SKILL.md`.
 
-### Branch → atomic commits → PR
+## Branch → atomic commits → PR
 
 ![Git flow: branch first, atomic Conventional commits, then a PR](06-git-flow.png)
 
 Branch first · **atomic Conventional commits** · PR explains What · Why · Test · Risk · Rollback.
 
-### Reference · Bonus · @claude GitHub Action
+## Reference · Bonus · @claude GitHub Action
 
 `anthropics/claude-code-action` turns Claude into a **teammate in your repo**:
 
@@ -38,14 +36,14 @@ with:
 
 Stretch goal in the exercise — wire it on a throwaway repo.
 
-### Reference · Common mistakes
+## Reference · Common mistakes
 
 - One giant commit called `feat: stuff` — re-run the splitter.
 - PR that says *what* but not *why* — reviewers reject it.
 - Writing the PR from the prompt instead of the diff.
 - Pushing to main (always branch first).
 
-### Worked example · Split commits, write the PR
+## Worked example · Split commits, write the PR
 
 1. On the Module 5 tree (dirty): `git switch -c feat/notes-api-tests-and-fixes`. Then paste:
 
@@ -64,7 +62,7 @@ Write a PR description from the branch diff: What, Why, How to test, Risk, Rollb
 
 **Success signal**: ≥ 3 atomic commits with Conventional subjects; PR explains *why*, not just *what*.
 
-### Try it yourself · Branch → commits → PR
+## Try it yourself · Branch → commits → PR
 
 **Exercise**: [`exercises/part-06/README.md`](#hands-on-exercise--module-06)
 
@@ -77,7 +75,7 @@ Take your Module 5 work onto a feature branch and ship a clean history:
 
 **Success signal**: a mergeable PR with sensible Conventional-Commit messages.
 
-### Done & next
+## Done & next
 
 **Definition of done**
 

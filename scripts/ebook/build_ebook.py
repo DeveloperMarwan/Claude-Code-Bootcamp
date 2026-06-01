@@ -474,6 +474,23 @@ def read(rel: str) -> str:
     return (REPO_ROOT / rel).read_text(encoding="utf-8")
 
 
+def render_under_wrapper(rel: str, link_map: dict, heading_shift: int,
+                         img_handler=None) -> str:
+    """Render a source whose own leading title duplicates a wrapper heading.
+
+    Several sources (the chapter slide, the skills library, the knowledge quiz)
+    open with a title that merely restates a heading the builder already emits
+    just above them. Rendering at the normal depth would stack two near-identical
+    headings and leave an empty section. This drops that leading title and, to
+    keep the hierarchy intact, renders one level shallower so the source's own
+    sections land at the wrapper's child depth instead of jumping a level.
+    """
+    body = transform(read(rel), rel, link_map,
+                     heading_shift=max(heading_shift - 1, 0),
+                     img_handler=img_handler)
+    return strip_leading_heading(body)
+
+
 def code_figures(chapter: dict) -> list[str]:
     """Render a chapter's ``code_figures`` as captioned fenced code blocks.
 
@@ -602,6 +619,12 @@ def chapter_sections(chapter: dict, include_solutions: bool, link_map: dict,
         return transform(read(rel), rel, link_map,
                          heading_shift=heading_shift, img_handler=img_handler)
 
+    def render_slide(rel: str) -> str:
+        # The slide opens with its own title heading, which merely restates the
+        # chapter title the builder already emits. Drop that duplicate so the
+        # chapter title flows straight into the slide's lead text.
+        return render_under_wrapper(rel, link_map, heading_shift, img_handler)
+
     def wrapper(title: str, anchor: str) -> str:
         suffix = f" {{#{anchor}}}" if anchored else ""
         return f"{h_section} {title}{suffix}"
@@ -610,11 +633,14 @@ def chapter_sections(chapter: dict, include_solutions: bool, link_map: dict,
 
     # Book-only intro (e.g. installation/setup prose with no live slide),
     # rendered before the slide body so it reads as the chapter's opening.
+    # Its own leading title is dropped so the chapter title flows straight into
+    # the intro's lead text rather than stacking two headings.
     if chapter.get("intro"):
-        parts.append(render(chapter["intro"]))
+        parts.append(render_under_wrapper(chapter["intro"], link_map,
+                                          heading_shift, img_handler))
         parts.append("")
 
-    parts.append(render(chapter["slide"]))
+    parts.append(render_slide(chapter["slide"]))
     parts.append("")
 
     # Book-only supplement (reading material with no live slide), rendered at
@@ -663,7 +689,7 @@ def build_back_matter(manifest: dict, link_map: dict) -> str:
     parts.append("## Appendix A — Skills Library")
     parts.append("")
     if back.get("skills"):
-        parts.append(transform(read(back["skills"]), back["skills"], link_map))
+        parts.append(render_under_wrapper(back["skills"], link_map, 2))
         parts.append("")
 
     parts.append(
@@ -678,7 +704,7 @@ def build_back_matter(manifest: dict, link_map: dict) -> str:
     if back.get("assessments"):
         parts.append("## Appendix B — Knowledge Quiz")
         parts.append("")
-        parts.append(transform(read(back["assessments"]), back["assessments"], link_map))
+        parts.append(render_under_wrapper(back["assessments"], link_map, 2))
         parts.append("")
 
     return "\n".join(parts)
