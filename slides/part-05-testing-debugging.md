@@ -101,7 +101,7 @@ Instructor cues:
 
 ## Live demo · Plant a bug, catch it (6 min)
 
-1. Open the Module 4 winner; ask for a test suite (pytest + httpx, or vitest + fetch). Run → green.
+1. Open the Module 4 winner; ask for a test suite (`pytest` + `httpx`, or `vitest` + fetch). Run → green.
 2. Plant one off-by-one bug live (e.g. a pagination boundary).
 3. Paste the **self-review prompt** verbatim:
 

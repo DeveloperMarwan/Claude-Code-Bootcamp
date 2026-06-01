@@ -122,7 +122,7 @@ Result: opened https://github.com/acme/notes/issues/42
 The reference comparison smoke-tested **three candidate APIs**:
 1. Single agent runs the skill against all three in sequence.
 2. Lead + 2 workers — each worker tests one candidate, lead picks the winner.
-3. Two `git worktree`-isolated agents on competing fixes.
+3. Two agents isolated in separate `git worktree`s on competing fixes.
 
 The takeaway captured in `multi-agent-compare.md`: fan-out helps when the checks are
 **independent per candidate**; it hurts when the agents must agree on a single shared

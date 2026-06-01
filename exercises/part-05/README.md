@@ -20,9 +20,9 @@ The winning Notes API "looks right". You don't ship code on vibes. Today you gen
 
 ```text
 GENERATE TESTS
-Read the Notes API in this folder. Write a pytest suite (or vitest if Node)
+Read the Notes API in this folder. Write a `pytest` suite (or `vitest` if Node)
 covering: create, list, search, get-one, update, delete, 404, 422.
-Use httpx (or fetch) and a temp SQLite DB per test. No network. No mocks
+Use `httpx` (or fetch) and a temp SQLite DB per test. No network. No mocks
 of HTTP — start the app in-process.
 ```
 

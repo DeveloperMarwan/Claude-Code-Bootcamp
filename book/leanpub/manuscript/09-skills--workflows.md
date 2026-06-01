@@ -234,7 +234,7 @@ terminal output in module-09/hook-fired.md, then revert the bug.
 
 ```text
 RUN ONE SCOPED MCP ACTION
-Following skills/mcp-context-brief/SKILL.md, write a 5-line brief at the top
+Following `skills/mcp-context-brief/SKILL.md`, write a 5-line brief at the top
 of module-09/mcp-run.md (task, server, scope = ONE repo, allowed action =
 open one issue, stop condition). Then use the GitHub MCP server to open an
 issue titled "notes-api-smoke: <PASS|FAIL> on <date>" with the skill output
@@ -278,7 +278,7 @@ module-09/
 
 ### Stretch challenge
 
-Run the same verification with a **multi-agent fan-out**: a "lead" plus two "worker" agents (or two `git worktree`-isolated agents) each smoke-test a different candidate API, and the lead picks the winner. Capture the comparison as `module-09/multi-agent-compare.md`. Note explicitly when fan-out is **worse** than a single agent — that's the real learning.
+Run the same verification with a **multi-agent fan-out**: a "lead" plus two "worker" agents (or two agents isolated in separate `git worktree`s) each smoke-test a different candidate API, and the lead picks the winner. Capture the comparison as `module-09/multi-agent-compare.md`. Note explicitly when fan-out is **worse** than a single agent — that's the real learning.
 
 ### Troubleshooting
 
@@ -415,7 +415,7 @@ Result: opened https://github.com/acme/notes/issues/42
 The reference comparison smoke-tested **three candidate APIs**:
 1. Single agent runs the skill against all three in sequence.
 2. Lead + 2 workers — each worker tests one candidate, lead picks the winner.
-3. Two `git worktree`-isolated agents on competing fixes.
+3. Two agents isolated in separate `git worktree`s on competing fixes.
 
 The takeaway captured in `multi-agent-compare.md`: fan-out helps when the checks are
 **independent per candidate**; it hurts when the agents must agree on a single shared

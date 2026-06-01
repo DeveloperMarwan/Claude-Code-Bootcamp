@@ -47,7 +47,7 @@ ruff check .                        # lint
 
 # Do-not
 
-- Never add external *runtime* dependencies — solutions stay stdlib-only.
+- Never add external *runtime* dependencies — solutions stay `stdlib`-only.
 - Never commit non-template data files; `.gitignore` generated `tasks.json`.
 - Don't change the `module-NN/` layout without updating `instructor-guide.md`.
 

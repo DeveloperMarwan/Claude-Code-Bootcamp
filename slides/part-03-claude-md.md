@@ -109,7 +109,7 @@ SPEAKER NOTES — slide 3 (reference, 1 min)
 
 ## Stack
 - Python 3.11 · FastAPI · Pydantic v2 · SQLite (stdlib sqlite3).
-- Tests: pytest + httpx. Lint: ruff. Format: black.
+- Tests: `pytest` + `httpx`. Lint: ruff. Format: black.
 
 ## Conventions
 - snake_case modules; routes in app/routers/, models in app/models.py.

@@ -55,7 +55,7 @@ Template: `skills/claude-md-template/SKILL.md`.
 
 ## Stack
 - Python 3.11 · FastAPI · Pydantic v2 · SQLite (stdlib sqlite3).
-- Tests: pytest + httpx. Lint: ruff. Format: black.
+- Tests: `pytest` + `httpx`. Lint: ruff. Format: black.
 
 ## Conventions
 - snake_case modules; routes in app/routers/, models in app/models.py.
@@ -294,7 +294,7 @@ ruff check .                        # lint
 
 # Do-not
 
-- Never add external *runtime* dependencies — solutions stay stdlib-only.
+- Never add external *runtime* dependencies — solutions stay `stdlib`-only.
 - Never commit non-template data files; `.gitignore` generated `tasks.json`.
 - Don't change the `module-NN/` layout without updating `instructor-guide.md`.
 

@@ -18,7 +18,7 @@ Skip when: the module is a thin glue layer with zero branching.
 ## Body
 
 1. Read the module's public surface (exports / route handlers / CLI commands).
-2. Pick the framework appropriate to the runtime: pytest (Python), vitest (Node + TS).
+2. Pick the framework appropriate to the runtime: `pytest` (Python), `vitest` (Node + TS).
 3. For each public entry point, generate **at minimum**:
    - One happy-path test.
    - One error-path test (invalid input, missing resource, etc.).

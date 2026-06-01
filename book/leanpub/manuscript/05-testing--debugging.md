@@ -37,7 +37,7 @@ Test in-process with a temp SQLite DB per test — **no network, no HTTP mocks, 
 
 ## Worked example · Plant a bug, catch it
 
-1. Open the Module 4 winner; ask for a test suite (pytest + httpx, or vitest + fetch). Run → green.
+1. Open the Module 4 winner; ask for a test suite (`pytest` + `httpx`, or `vitest` + fetch). Run → green.
 2. Plant one off-by-one bug live (e.g. a pagination boundary).
 3. Paste the **self-review prompt** verbatim:
 
@@ -98,9 +98,9 @@ The winning Notes API "looks right". You don't ship code on vibes. Today you gen
 
 ```text
 GENERATE TESTS
-Read the Notes API in this folder. Write a pytest suite (or vitest if Node)
+Read the Notes API in this folder. Write a `pytest` suite (or `vitest` if Node)
 covering: create, list, search, get-one, update, delete, 404, 422.
-Use httpx (or fetch) and a temp SQLite DB per test. No network. No mocks
+Use `httpx` (or fetch) and a temp SQLite DB per test. No network. No mocks
 of HTTP — start the app in-process.
 ```
 
